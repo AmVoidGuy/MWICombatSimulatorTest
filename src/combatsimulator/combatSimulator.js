@@ -171,6 +171,7 @@ class CombatSimulator extends EventTarget {
         if(!unit.isPlayer){
             for (const ability of unit.abilities) {
                 if(ability !== null) {
+                    ability.firstUse = true;
                     ability.lastUsed = this.simulationTime + Math.floor(Math.random() * ability.cooldownDuration);
                 }
             }
@@ -328,9 +329,6 @@ class CombatSimulator extends EventTarget {
 
     tryCastAbility(source, ability, time) {
         //check triggers
-        if (time < ability.lastUsed + ability.cooldownDuration) {
-            return false;
-        }
 
         if (source.combatDetails.currentHitpoints <= 0) {
             return false;
@@ -349,6 +347,12 @@ class CombatSimulator extends EventTarget {
 
         if (source.isStunned) {
             return false;
+        }
+
+        if (ability.firstUse == true && (time < ability.lastUsed)) {
+            return false;
+        } else if (ability.firstUse == true){
+            ability.firstUse = false;
         }
 
         return true;

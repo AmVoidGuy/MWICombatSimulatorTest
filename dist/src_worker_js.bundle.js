@@ -20,6 +20,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class Ability {
+    firstUse = false;
     constructor(hrid, level, triggers = null) {
         this.hrid = hrid;
         this.level = level;
@@ -78,6 +79,7 @@ class Ability {
         }
 
         this.lastUsed = Number.MIN_SAFE_INTEGER;
+        this.firstUse = false;
     }
 
     static createFromDTO(dto) {
@@ -97,7 +99,11 @@ class Ability {
         }
 
         let hastedCooldownDuration = this.cooldownDuration * 100 / (100 + source.combatDetails.combatStats.abilityHaste)
-        if (this.lastUsed + hastedCooldownDuration > currentTime) {
+        if (this.lastUsed + hastedCooldownDuration > currentTime && this.firstUse === false) {
+            return false;
+        }
+
+        if (this.lastUsed > currentTime && this.firstUse === true) {
             return false;
         }
 
@@ -347,6 +353,7 @@ class CombatSimulator extends EventTarget {
         if(!unit.isPlayer){
             for (const ability of unit.abilities) {
                 if(ability !== null) {
+                    ability.firstUse = true;
                     ability.lastUsed = this.simulationTime + Math.floor(Math.random() * ability.cooldownDuration);
                 }
             }
@@ -504,9 +511,6 @@ class CombatSimulator extends EventTarget {
 
     tryCastAbility(source, ability, time) {
         //check triggers
-        if (time < ability.lastUsed + ability.cooldownDuration) {
-            return false;
-        }
 
         if (source.combatDetails.currentHitpoints <= 0) {
             return false;
@@ -525,6 +529,12 @@ class CombatSimulator extends EventTarget {
 
         if (source.isStunned) {
             return false;
+        }
+
+        if (ability.firstUse == true && (time < ability.lastUsed)) {
+            return false;
+        } else if (ability.firstUse == true){
+            ability.firstUse = false;
         }
 
         return true;
@@ -774,8 +784,6 @@ class CombatSimulator extends EventTarget {
             return false;
         }
 
-        // console.log("Casting:", ability);
-
         if (source.isPlayer) {
             if(source.abilityManaCosts.has(ability.hrid)) {
                 source.abilityManaCosts.set(ability.hrid, source.abilityManaCosts.get(ability.hrid) + ability.manaCost);
@@ -875,7 +883,6 @@ class CombatSimulator extends EventTarget {
                 );
                 this.eventQueue.addEvent(damageOverTimeTickEvent);
             }
-
             if (attackResult.didHit && abilityEffect.stunChance > 0 && Math.random() < abilityEffect.stunChance * 100 / (100 + target.combatDetails.combatStats.tenacity)) {
                 target.isStunned = true;
                 target.stunExpireTime = this.simulationTime + abilityEffect.stunDuration;

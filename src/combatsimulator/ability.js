@@ -3,6 +3,7 @@ import abilityDetailMap from "./data/abilityDetailMap.json";
 import Trigger from "./trigger";
 
 class Ability {
+    firstUse = false;
     constructor(hrid, level, triggers = null) {
         this.hrid = hrid;
         this.level = level;
@@ -61,6 +62,7 @@ class Ability {
         }
 
         this.lastUsed = Number.MIN_SAFE_INTEGER;
+        this.firstUse = false;
     }
 
     static createFromDTO(dto) {
@@ -80,7 +82,11 @@ class Ability {
         }
 
         let hastedCooldownDuration = this.cooldownDuration * 100 / (100 + source.combatDetails.combatStats.abilityHaste)
-        if (this.lastUsed + hastedCooldownDuration > currentTime) {
+        if (this.lastUsed + hastedCooldownDuration > currentTime && this.firstUse === false) {
+            return false;
+        }
+
+        if (this.lastUsed > currentTime && this.firstUse === true) {
             return false;
         }
 
