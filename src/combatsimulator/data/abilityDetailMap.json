@@ -279,8 +279,8 @@
                 "damageType": "/damage_types/nature",
                 "baseDamageFlat": 10,
                 "baseDamageFlatLevelBonus": 0.1,
-                "baseDamageRatio": 0.8,
-                "baseDamageRatioLevelBonus": 0.008,
+                "baseDamageRatio": 0.9,
+                "baseDamageRatioLevelBonus": 0.009,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -308,7 +308,7 @@
         "hrid": "/abilities/fire_storm",
         "name": "Firestorm",
         "description": "Casts a firestorm at all enemies",
-        "manaCost": 70,
+        "manaCost": 75,
         "cooldownDuration": 15000000000,
         "castDuration": 2000000000,
         "hasSpecialEffects": false,
@@ -367,8 +367,8 @@
                 "damageType": "/damage_types/fire",
                 "baseDamageFlat": 10,
                 "baseDamageFlatLevelBonus": 0.1,
-                "baseDamageRatio": 0.65,
-                "baseDamageRatioLevelBonus": 0.0065,
+                "baseDamageRatio": 0.55,
+                "baseDamageRatioLevelBonus": 0.0055,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -449,8 +449,8 @@
                 "damageType": "/damage_types/fire",
                 "baseDamageFlat": 20,
                 "baseDamageFlatLevelBonus": 0.2,
-                "baseDamageRatio": 0.85,
-                "baseDamageRatioLevelBonus": 0.0085,
+                "baseDamageRatio": 0.8,
+                "baseDamageRatioLevelBonus": 0.008,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -536,7 +536,7 @@
         "hrid": "/abilities/frost_surge",
         "name": "Frost Surge",
         "description": "Casts frost surge at all enemies",
-        "manaCost": 70,
+        "manaCost": 75,
         "cooldownDuration": 15000000000,
         "castDuration": 2000000000,
         "hasSpecialEffects": false,
@@ -548,8 +548,8 @@
                 "damageType": "/damage_types/water",
                 "baseDamageFlat": 30,
                 "baseDamageFlatLevelBonus": 0.3,
-                "baseDamageRatio": 1.1,
-                "baseDamageRatioLevelBonus": 0.011,
+                "baseDamageRatio": 1,
+                "baseDamageRatioLevelBonus": 0.01,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -569,7 +569,7 @@
                         "flatBoost": 0,
                         "flatBoostLevelBonus": 0,
                         "startTime": "0001-01-01T00:00:00Z",
-                        "duration": 8000000000
+                        "duration": 9000000000
                     }
                 ]
             }
@@ -647,8 +647,8 @@
                 "damageType": "/damage_types/water",
                 "baseDamageFlat": 20,
                 "baseDamageFlatLevelBonus": 0.2,
-                "baseDamageRatio": 1.4,
-                "baseDamageRatioLevelBonus": 0.014,
+                "baseDamageRatio": 1.2,
+                "baseDamageRatioLevelBonus": 0.012,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -779,10 +779,10 @@
                 "effectType": "/ability_effect_types/damage",
                 "combatStyleHrid": "/combat_styles/magic",
                 "damageType": "/damage_types/nature",
-                "baseDamageFlat": 20,
-                "baseDamageFlatLevelBonus": 0.2,
-                "baseDamageRatio": 0.8,
-                "baseDamageRatioLevelBonus": 0.008,
+                "baseDamageFlat": 30,
+                "baseDamageFlatLevelBonus": 0.3,
+                "baseDamageRatio": 1,
+                "baseDamageRatioLevelBonus": 0.01,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -1476,7 +1476,7 @@
         "hrid": "/abilities/toxic_pollen",
         "name": "Toxic Pollen",
         "description": "Casts toxic pollen at all enemies",
-        "manaCost": 45,
+        "manaCost": 50,
         "cooldownDuration": 18000000000,
         "castDuration": 2000000000,
         "hasSpecialEffects": false,
@@ -1488,8 +1488,8 @@
                 "damageType": "/damage_types/nature",
                 "baseDamageFlat": 20,
                 "baseDamageFlatLevelBonus": 0.2,
-                "baseDamageRatio": 0.6,
-                "baseDamageRatioLevelBonus": 0.006,
+                "baseDamageRatio": 0.7,
+                "baseDamageRatioLevelBonus": 0.007,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,
@@ -1509,7 +1509,7 @@
                         "flatBoost": -15,
                         "flatBoostLevelBonus": -0.15,
                         "startTime": "0001-01-01T00:00:00Z",
-                        "duration": 10000000000
+                        "duration": 12000000000
                     },
                     {
                         "uniqueHrid": "/buff_uniques/toxic_pollen_water_resistance",
@@ -1519,7 +1519,7 @@
                         "flatBoost": -20,
                         "flatBoostLevelBonus": -0.2,
                         "startTime": "0001-01-01T00:00:00Z",
-                        "duration": 10000000000
+                        "duration": 12000000000
                     },
                     {
                         "uniqueHrid": "/buff_uniques/toxic_pollen_nature_resistance",
@@ -1529,7 +1529,7 @@
                         "flatBoost": -25,
                         "flatBoostLevelBonus": -0.25,
                         "startTime": "0001-01-01T00:00:00Z",
-                        "duration": 10000000000
+                        "duration": 12000000000
                     },
                     {
                         "uniqueHrid": "/buff_uniques/toxic_pollen_fire_resistance",
@@ -1539,7 +1539,7 @@
                         "flatBoost": -20,
                         "flatBoostLevelBonus": -0.2,
                         "startTime": "0001-01-01T00:00:00Z",
-                        "duration": 10000000000
+                        "duration": 12000000000
                     }
                 ]
             }
@@ -1628,8 +1628,8 @@
                 "damageType": "/damage_types/water",
                 "baseDamageFlat": 10,
                 "baseDamageFlatLevelBonus": 0.1,
-                "baseDamageRatio": 0.65,
-                "baseDamageRatioLevelBonus": 0.0065,
+                "baseDamageRatio": 0.55,
+                "baseDamageRatioLevelBonus": 0.0055,
                 "bonusAccuracyRatio": 0,
                 "bonusAccuracyRatioLevelBonus": 0,
                 "damageOverTimeRatio": 0,

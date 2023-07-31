@@ -277,7 +277,7 @@ class CombatUtilities {
     }
 
     static calculateAttackExperience(damage, mitigated, combatStyle) {
-        let baseExpForDamage = 0.6 + 0.125 * (damage + 0.3 * mitigated);
+        let baseExpForDamage = 0.6 + 0.125 * (damage + 0.35 * mitigated);
         switch (combatStyle) {
             case "/combat_styles/stab":
                 return baseExpForDamage * 0.9;
@@ -291,7 +291,7 @@ class CombatUtilities {
     }
 
     static calculatePowerExperience(damage, mitigated, combatStyle) {
-        let baseExpForDamage = 0.6 + 0.125 * (damage + 0.3 * mitigated);
+        let baseExpForDamage = 0.6 + 0.125 * (damage + 0.35 * mitigated);
         switch (combatStyle) {
             case "/combat_styles/smash":
                 return baseExpForDamage * 0.9;
@@ -309,12 +309,12 @@ class CombatUtilities {
     }
 
     static calculateRangedExperience(damage, mitigated) {
-        let baseExpForDamage = 0.6 + 0.125 * (damage + 0.3 * mitigated);
+        let baseExpForDamage = 0.6 + 0.125 * (damage + 0.35 * mitigated);
         return baseExpForDamage * 0.667;
     }
 
     static calculateMagicExperience(damage, mitigated) {
-        let baseExpForDamage = 0.6 + 0.125 * (damage + 0.3 * mitigated);
+        let baseExpForDamage = 0.6 + 0.125 * (damage + 0.35 * mitigated);
         return baseExpForDamage * 0.667;
     }
 }
