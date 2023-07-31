@@ -400,15 +400,15 @@ class CombatSimulator extends EventTarget {
         this.simResult.addExperienceGain(event.target, "stamina", targetStaminaExperience);
 
         if(event.abilityType === "/combat_styles/ranged") {
-            let combatExperience = CombatUtilities.calculateRangedExperience(damage);
+            let combatExperience = CombatUtilities.calculateRangedExperience(damage, 0);
             this.simResult.addExperienceGain(event.sourceRef, "ranged", combatExperience);
         } else if(event.abilityType === "/combat_styles/magic") {
-            let combatExperience = CombatUtilities.calculateMagicExperience(damage);
+            let combatExperience = CombatUtilities.calculateMagicExperience(damage, 0);
             this.simResult.addExperienceGain(event.sourceRef, "magic", combatExperience);
         } else {
-            let attackExperience = CombatUtilities.calculateAttackExperience(damage, event.abilityType)
+            let attackExperience = CombatUtilities.calculateAttackExperience(damage, 0, event.abilityType)
             this.simResult.addExperienceGain(event.sourceRef, "attack", attackExperience);
-            let powerExperience = CombatUtilities.calculatePowerExperience(damage, event.abilityType)
+            let powerExperience = CombatUtilities.calculatePowerExperience(damage, 0, event.abilityType)
             this.simResult.addExperienceGain(event.sourceRef, "power", powerExperience);
         }
         if (event.currentTick < event.totalTicks) {
@@ -759,7 +759,7 @@ class CombatSimulator extends EventTarget {
         }
 
         let amountHealed = CombatUtilities.processHeal(source, abilityEffect);
-        let experienceGained = CombatUtilities.calculateMagicExperience(amountHealed);
+        let experienceGained = CombatUtilities.calculateMagicExperience(amountHealed, 0);
 
         this.simResult.addHitpointsGained(source, ability.hrid, amountHealed);
         this.simResult.addExperienceGain(source, "magic", experienceGained);

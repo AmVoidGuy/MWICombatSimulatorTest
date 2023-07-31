@@ -576,15 +576,15 @@ class CombatSimulator extends EventTarget {
         this.simResult.addExperienceGain(event.target, "stamina", targetStaminaExperience);
 
         if(event.abilityType === "/combat_styles/ranged") {
-            let combatExperience = _combatUtilities__WEBPACK_IMPORTED_MODULE_0__["default"].calculateRangedExperience(damage);
+            let combatExperience = _combatUtilities__WEBPACK_IMPORTED_MODULE_0__["default"].calculateRangedExperience(damage, 0);
             this.simResult.addExperienceGain(event.sourceRef, "ranged", combatExperience);
         } else if(event.abilityType === "/combat_styles/magic") {
-            let combatExperience = _combatUtilities__WEBPACK_IMPORTED_MODULE_0__["default"].calculateMagicExperience(damage);
+            let combatExperience = _combatUtilities__WEBPACK_IMPORTED_MODULE_0__["default"].calculateMagicExperience(damage, 0);
             this.simResult.addExperienceGain(event.sourceRef, "magic", combatExperience);
         } else {
-            let attackExperience = _combatUtilities__WEBPACK_IMPORTED_MODULE_0__["default"].calculateAttackExperience(damage, event.abilityType)
+            let attackExperience = _combatUtilities__WEBPACK_IMPORTED_MODULE_0__["default"].calculateAttackExperience(damage, 0, event.abilityType)
             this.simResult.addExperienceGain(event.sourceRef, "attack", attackExperience);
-            let powerExperience = _combatUtilities__WEBPACK_IMPORTED_MODULE_0__["default"].calculatePowerExperience(damage, event.abilityType)
+            let powerExperience = _combatUtilities__WEBPACK_IMPORTED_MODULE_0__["default"].calculatePowerExperience(damage, 0, event.abilityType)
             this.simResult.addExperienceGain(event.sourceRef, "power", powerExperience);
         }
         if (event.currentTick < event.totalTicks) {
@@ -935,7 +935,7 @@ class CombatSimulator extends EventTarget {
         }
 
         let amountHealed = _combatUtilities__WEBPACK_IMPORTED_MODULE_0__["default"].processHeal(source, abilityEffect);
-        let experienceGained = _combatUtilities__WEBPACK_IMPORTED_MODULE_0__["default"].calculateMagicExperience(amountHealed);
+        let experienceGained = _combatUtilities__WEBPACK_IMPORTED_MODULE_0__["default"].calculateMagicExperience(amountHealed, 0);
 
         this.simResult.addHitpointsGained(source, ability.hrid, amountHealed);
         this.simResult.addExperienceGain(source, "magic", experienceGained);
