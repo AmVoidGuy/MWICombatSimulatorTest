@@ -304,8 +304,49 @@
         ],
         "sortIndex": 19
     },
-    "/abilities/fire_storm": {
-        "hrid": "/abilities/fire_storm",
+    "/abilities/fireball": {
+        "hrid": "/abilities/fireball",
+        "name": "Fireball",
+        "description": "Casts a fireball at the targeted enemy",
+        "manaCost": 10,
+        "cooldownDuration": 0,
+        "castDuration": 3000000000,
+        "hasSpecialEffects": false,
+        "abilityEffects": [
+            {
+                "targetType": "enemy",
+                "effectType": "/ability_effect_types/damage",
+                "combatStyleHrid": "/combat_styles/magic",
+                "damageType": "/damage_types/fire",
+                "baseDamageFlat": 10,
+                "baseDamageFlatLevelBonus": 0.1,
+                "baseDamageRatio": 0.55,
+                "baseDamageRatioLevelBonus": 0.0055,
+                "bonusAccuracyRatio": 0,
+                "bonusAccuracyRatioLevelBonus": 0,
+                "damageOverTimeRatio": 0,
+                "damageOverTimeDuration": 0,
+                "blindChance": 0,
+                "blindDuration": 0,
+                "silenceChance": 0,
+                "silenceDuration": 0,
+                "stunChance": 0,
+                "stunDuration": 0,
+                "buffs": null
+            }
+        ],
+        "defaultCombatTriggers": [
+            {
+                "dependencyHrid": "/combat_trigger_dependencies/targeted_enemy",
+                "conditionHrid": "/combat_trigger_conditions/current_hp",
+                "comparatorHrid": "/combat_trigger_comparators/greater_than_equal",
+                "value": 1
+            }
+        ],
+        "sortIndex": 22
+    },
+    "/abilities/firestorm": {
+        "hrid": "/abilities/firestorm",
         "name": "Firestorm",
         "description": "Casts a firestorm at all enemies",
         "manaCost": 75,
@@ -350,47 +391,6 @@
             }
         ],
         "sortIndex": 24
-    },
-    "/abilities/fireball": {
-        "hrid": "/abilities/fireball",
-        "name": "Fireball",
-        "description": "Casts a fireball at the targeted enemy",
-        "manaCost": 10,
-        "cooldownDuration": 0,
-        "castDuration": 3000000000,
-        "hasSpecialEffects": false,
-        "abilityEffects": [
-            {
-                "targetType": "enemy",
-                "effectType": "/ability_effect_types/damage",
-                "combatStyleHrid": "/combat_styles/magic",
-                "damageType": "/damage_types/fire",
-                "baseDamageFlat": 10,
-                "baseDamageFlatLevelBonus": 0.1,
-                "baseDamageRatio": 0.55,
-                "baseDamageRatioLevelBonus": 0.0055,
-                "bonusAccuracyRatio": 0,
-                "bonusAccuracyRatioLevelBonus": 0,
-                "damageOverTimeRatio": 0,
-                "damageOverTimeDuration": 0,
-                "blindChance": 0,
-                "blindDuration": 0,
-                "silenceChance": 0,
-                "silenceDuration": 0,
-                "stunChance": 0,
-                "stunDuration": 0,
-                "buffs": null
-            }
-        ],
-        "defaultCombatTriggers": [
-            {
-                "dependencyHrid": "/combat_trigger_dependencies/targeted_enemy",
-                "conditionHrid": "/combat_trigger_conditions/current_hp",
-                "comparatorHrid": "/combat_trigger_comparators/greater_than_equal",
-                "value": 1
-            }
-        ],
-        "sortIndex": 22
     },
     "/abilities/flame_arrow": {
         "hrid": "/abilities/flame_arrow",

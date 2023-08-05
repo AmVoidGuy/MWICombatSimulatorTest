@@ -41274,7 +41274,7 @@
             "defaultCombatTriggers": null
         },
         "abilityBookDetail": {
-            "abilityHrid": "/abilities/fire_storm",
+            "abilityHrid": "/abilities/firestorm",
             "levelRequirements": [
                 {
                     "skillHrid": "/skills/intelligence",
@@ -98270,7 +98270,7 @@
                 "stabDamage": 0,
                 "slashDamage": 0,
                 "smashDamage": 0,
-                "rangedDamage": 0.05,
+                "rangedDamage": 0.04,
                 "magicDamage": 0,
                 "taskDamage": 0,
                 "physicalAmplify": 0,
@@ -98347,7 +98347,7 @@
                 "stabDamage": 0,
                 "slashDamage": 0,
                 "smashDamage": 0,
-                "rangedDamage": 0.001,
+                "rangedDamage": 0.0008,
                 "magicDamage": 0,
                 "taskDamage": 0,
                 "physicalAmplify": 0,
@@ -100988,7 +100988,8 @@
             }
         ],
         "protectionItemHrids": [
-            "/items/vampire_fang"
+            "/items/vampire_fang",
+            "/items/werewolf_claw"
         ],
         "equipmentDetail": {
             "type": "/equipment_types/two_hand",
@@ -106372,7 +106373,7 @@
     "/items/werewolf_claw": {
         "hrid": "/items/werewolf_claw",
         "name": "Werewolf Claw",
-        "description": "Material used in smithing Werewolf Slasher",
+        "description": "Material used in smithing Werewolf Slasher or crafting Vampiric Bow",
         "categoryHrid": "/item_categories/resource",
         "sellPrice": 10000,
         "isTradable": true,

@@ -17035,7 +17035,11 @@
         "inputItems": [
             {
                 "itemHrid": "/items/vampire_fang",
-                "count": 20
+                "count": 10
+            },
+            {
+                "itemHrid": "/items/werewolf_claw",
+                "count": 10
             }
         ],
         "outputItems": [

@@ -150,8 +150,13 @@ class CombatUnit {
                 (10 + this.combatDetails.powerLevel) *
                 (1 + this.combatDetails.combatStats[style + "Damage"]) *
                 (1 + damageRatioBoost);
-            this.combatDetails[style + "EvasionRating"] =
-                (10 + this.combatDetails.defenseLevel) * (1 + this.combatDetails.combatStats[style + "Evasion"]);
+            let baseEvasion = (10 + this.combatDetails.defenseLevel) * (1 + this.combatDetails.combatStats[style + "Evasion"]);
+            this.combatDetails[style + "EvasionRating"] = baseEvasion;
+            let evasionBoosts = this.getBuffBoosts("/buff_types/evasion");
+            for (const boost of evasionBoosts) {
+                this.combatDetails[style + "EvasionRating"] += boost.flatBoost;
+                this.combatDetails[style + "EvasionRating"] += baseEvasion * boost.ratioBoost;
+            }
         });
 
         this.combatDetails.rangedAccuracyRating =
@@ -162,8 +167,14 @@ class CombatUnit {
             (10 + this.combatDetails.rangedLevel) *
             (1 + this.combatDetails.combatStats.rangedDamage) *
             (1 + damageRatioBoost);
-        this.combatDetails.rangedEvasionRating =
-            (10 + this.combatDetails.defenseLevel) * (1 + this.combatDetails.combatStats.rangedEvasion);
+
+        let baseRangedEvasion = (10 + this.combatDetails.defenseLevel) * (1 + this.combatDetails.combatStats.rangedEvasion);
+        this.combatDetails.rangedEvasionRating = baseRangedEvasion;
+        let evasionBoosts = this.getBuffBoosts("/buff_types/evasion");
+        for (const boost of evasionBoosts) {
+            this.combatDetails.rangedEvasionRating += boost.flatBoost;
+            this.combatDetails.rangedEvasionRating += baseRangedEvasion * boost.ratioBoost;
+        }
 
         this.combatDetails.magicAccuracyRating =
             (10 + this.combatDetails.magicLevel) *
@@ -173,13 +184,14 @@ class CombatUnit {
             (10 + this.combatDetails.magicLevel) *
             (1 + this.combatDetails.combatStats.magicDamage) *
             (1 + damageRatioBoost);
-        this.combatDetails.magicEvasionRating =
-            (10 + (this.combatDetails.defenseLevel + this.combatDetails.rangedLevel) / 2) * (1 + this.combatDetails.combatStats.magicEvasion);
-        this.combatDetails.rangedEvasionRating += this.combatDetails.rangedEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
-        this.combatDetails.magicEvasionRating += this.combatDetails.magicEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
-        this.combatDetails.slashEvasionRating += this.combatDetails.slashEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
-        this.combatDetails.smashEvasionRating += this.combatDetails.smashEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
-        this.combatDetails.stabEvasionRating += this.combatDetails.stabEvasionRating * this.getBuffBoost("/buff_types/evasion").ratioBoost;
+
+        let baseMagicEvasion = (10 + ((this.combatDetails.defenseLevel + this.combatDetails.magicLevel) / 2)) * (1 + this.combatDetails.combatStats.magicEvasion);
+        this.combatDetails.magicEvasionRating = baseMagicEvasion;
+        for (const boost of evasionBoosts) {
+            this.combatDetails.magicEvasionRating += boost.flatBoost;
+            this.combatDetails.magicEvasionRating += baseMagicEvasion * boost.ratioBoost;
+        }
+
         this.combatDetails.combatStats.physicalAmplify += this.getBuffBoost("/buff_types/physical_amplify").flatBoost;
         this.combatDetails.combatStats.waterAmplify += this.getBuffBoost("/buff_types/water_amplify").flatBoost;
         this.combatDetails.combatStats.natureAmplify += this.getBuffBoost("/buff_types/nature_amplify").flatBoost;

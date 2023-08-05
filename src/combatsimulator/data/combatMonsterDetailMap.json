@@ -91,7 +91,7 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/fire_storm",
+                "abilityHrid": "/abilities/firestorm",
                 "level": 1
             },
             {
@@ -1389,7 +1389,7 @@
                 "level": 30
             },
             {
-                "abilityHrid": "/abilities/fire_storm",
+                "abilityHrid": "/abilities/firestorm",
                 "level": 10
             },
             {
@@ -2652,7 +2652,7 @@
                 "level": 10
             },
             {
-                "abilityHrid": "/abilities/poke",
+                "abilityHrid": "/abilities/smack",
                 "level": 20
             }
         ],
@@ -2688,7 +2688,7 @@
                 "maxCount": 1
             },
             {
-                "itemHrid": "/items/poke",
+                "itemHrid": "/items/smack",
                 "dropRate": 0.05,
                 "minCount": 1,
                 "maxCount": 1
@@ -4479,7 +4479,7 @@
         },
         "abilities": [
             {
-                "abilityHrid": "/abilities/fire_storm",
+                "abilityHrid": "/abilities/firestorm",
                 "level": 10
             },
             {
@@ -4508,7 +4508,7 @@
             },
             {
                 "itemHrid": "/items/infernal_ember",
-                "dropRate": 0.007,
+                "dropRate": 0.0007,
                 "minCount": 1,
                 "maxCount": 1
             },
@@ -7169,7 +7169,7 @@
             },
             {
                 "itemHrid": "/items/soul_fragment",
-                "dropRate": 0.007,
+                "dropRate": 0.0007,
                 "minCount": 1,
                 "maxCount": 1
             },
