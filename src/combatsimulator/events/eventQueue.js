@@ -33,12 +33,14 @@ class EventQueue {
 
     clearMatching(fn) {
         let heapEvents = this.minHeap.toArray();
-
+        let removed = false;
         for (const event of heapEvents) {
             if (fn(event)) {
                 this.minHeap.remove(event);
+                removed = true;
             }
         }
+        return removed;
     }
 }
 

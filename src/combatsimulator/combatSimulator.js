@@ -301,6 +301,10 @@ class CombatSimulator extends EventTarget {
     addNextAttackEvent(unit) {
         let enemies = this.enemies;
         let friendlies = this.players;
+        if(!unit.isPlayer) {
+            enemies = this.players;
+            friendlies = this.enemies;
+        }
         let target = CombatUtilities.getTarget(enemies);
         for (const ability of unit.abilities) {
             if (ability && ability.shouldTrigger(this.simulationTime, unit, target, friendlies, enemies)) {
@@ -469,12 +473,10 @@ class CombatSimulator extends EventTarget {
 
     processBlindExpirationEvent(event) {
         event.source.isBlind = false;
-        this.addNextAttackEvent(event.source);
     }
 
     processSilenceExpirationEvent(event) {
         event.source.isSilenced = false;
-        this.addNextAttackEvent(event.source);
     }
 
     processCastTimeReadyEvent(event) {
@@ -585,6 +587,10 @@ class CombatSimulator extends EventTarget {
 
     tryUseAbility(source, ability) {
         if (source.combatDetails.currentHitpoints <= 0) {
+            return false;
+        }
+
+        if (source.isSilenced) {
             return false;
         }
 
@@ -701,6 +707,7 @@ class CombatSimulator extends EventTarget {
                 target.isStunned = true;
                 target.stunExpireTime = this.simulationTime + abilityEffect.stunDuration;
                 this.eventQueue.clearMatching((event) => event.type == AutoAttackEvent.type && event.source == target);
+                this.eventQueue.clearMatching((event) => event.type == CastTimeReadyEvent.type && event.source == target);
                 let stunExpirationEvent = new StunExpirationEvent(target.stunExpireTime, target);
                 this.eventQueue.addEvent(stunExpirationEvent);
             }
@@ -708,7 +715,10 @@ class CombatSimulator extends EventTarget {
             if (attackResult.didHit && abilityEffect.blindChance > 0 && Math.random() < abilityEffect.blindChance * 100 / (100 + target.combatDetails.combatStats.tenacity)) {
                 target.isBlind = true;
                 target.blindExpireTime = this.simulationTime + abilityEffect.blindDuration;
-                this.eventQueue.clearMatching((event) => event.type == AutoAttackEvent.type && event.source == target);
+                let removed = this.eventQueue.clearMatching((event) => event.type == AutoAttackEvent.type && event.source == target);
+                if (removed) {
+                    this.addNextAttackEvent(target);
+                }
                 let blindExpirationEvent = new BlindExpirationEvent(target.blindExpireTime, target);
                 this.eventQueue.addEvent(blindExpirationEvent);
             }
@@ -716,7 +726,10 @@ class CombatSimulator extends EventTarget {
             if (attackResult.didHit && abilityEffect.silenceChance > 0 && Math.random() < abilityEffect.silenceChance * 100 / (100 + target.combatDetails.combatStats.tenacity)) {
                 target.isSilenced = true;
                 target.silenceExpireTime = this.simulationTime + abilityEffect.silenceDuration;
-                this.eventQueue.clearMatching((event) => event.type == CastTimeReadyEvent.type && event.source == target);
+                let removed = this.eventQueue.clearMatching((event) => event.type == CastTimeReadyEvent.type && event.source == target);
+                if (removed) {
+                    this.addNextAutoAttackEvent(target);
+                }
                 let silenceExpirationEvent = new SilenceExpirationEvent(target.silenceExpireTime, target);
                 this.eventQueue.addEvent(silenceExpirationEvent);
             }
