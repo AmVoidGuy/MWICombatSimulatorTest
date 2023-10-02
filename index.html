@@ -147,6 +147,17 @@
                                     />
                                 </div>
                             </div>
+                            <div class="row mb-2">
+                                <button
+                                        id="buttonHouseRoomsModal"
+                                        class="btn btn-primary"
+                                        type="button"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#houseRoomsModal"
+                                >
+                                    House Rooms
+                                </button>
+                            </div>
                             <!-- #endregion -->
                         </div>
                         <div class="col-md-8">
@@ -1550,6 +1561,26 @@
             </div>
             <!-- #endregion -->
         </div>
+        <div class="modal" id="houseRoomsModal" tabindex="-1">
+            <!-- #region House Rooms Modal -->
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">House Rooms</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div id="houseRoomsList"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+            <!-- #endregion -->
+        </div>
         <div class="modal" id="equipmentSetsModal" tabindex="-1">
             <!-- #region Equipment Sets Modal -->
             <div class="modal-dialog">
@@ -1629,6 +1660,6 @@
         <script src="dist/bundle.js" type="module"></script>
     </body>
     <footer>
-        <div style="text-align: center;"><p>Credit to KuganDev for the original version</p></div>
+        <div style="text-align: center;"><p>Last Update: 10/2 - Credit to KuganDev for the original version</p></div>
     </footer>
 </html>

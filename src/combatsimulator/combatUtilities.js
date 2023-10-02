@@ -204,7 +204,7 @@ class CombatUtilities {
         };
 
         var damagePrevented = premitigatedDamage - damageDone;
-        if (target.combatDetails.combatStats.currentHitpoints == 0) {
+        if (target.combatDetails.currentHitpoints == 0) {
             damagePrevented = 0;
         } else if (damagePrevented < 0) {
             damagePrevented = 0;

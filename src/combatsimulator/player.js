@@ -2,6 +2,7 @@ import Ability from "./ability";
 import CombatUnit from "./combatUnit";
 import Consumable from "./consumable";
 import Equipment from "./equipment";
+import HouseRoom from "./houseRoom";
 
 class Player extends CombatUnit {
     equipment = {
@@ -16,6 +17,7 @@ class Player extends CombatUnit {
         "/equipment_types/pouch": null,
     };
 
+    houseRooms = [];
     constructor() {
         super();
 
@@ -41,7 +43,7 @@ class Player extends CombatUnit {
         player.food = dto.food.map((food) => (food ? Consumable.createFromDTO(food) : null));
         player.drinks = dto.drinks.map((drink) => (drink ? Consumable.createFromDTO(drink) : null));
         player.abilities = dto.abilities.map((ability) => (ability ? Ability.createFromDTO(ability) : null));
-
+        player.houseRooms = dto.houseRooms.map((houseRoom) => (houseRoom ? HouseRoom.createFromDTO(houseRoom) : null));
         return player;
     }
 

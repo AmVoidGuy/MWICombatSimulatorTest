@@ -2,8 +2,10 @@ import Equipment from "./combatsimulator/equipment.js";
 import Player from "./combatsimulator/player.js";
 import abilityDetailMap from "./combatsimulator/data/abilityDetailMap.json";
 import itemDetailMap from "./combatsimulator/data/itemDetailMap.json";
+import houseRoomDetailMap from "./combatsimulator/data/houseRoomDetailMap.json";
 import Ability from "./combatsimulator/ability.js";
 import Consumable from "./combatsimulator/consumable.js";
+import HouseRoom from "./combatsimulator/houseRoom"
 import combatTriggerDependencyDetailMap from "./combatsimulator/data/combatTriggerDependencyDetailMap.json";
 import combatTriggerConditionDetailMap from "./combatsimulator/data/combatTriggerConditionDetailMap.json";
 import combatTriggerComparatorDetailMap from "./combatsimulator/data/combatTriggerComparatorDetailMap.json";
@@ -81,6 +83,51 @@ function initEquipmentSelect(equipmentType) {
     selectElement.addEventListener("change", (event) => {
         equipmentSelectHandler(event, equipmentType);
     });
+}
+
+function initHouseRoomsModal() {
+    let houseRoomsModal = document.getElementById("houseRoomsModal");
+    houseRoomsModal.addEventListener("show.bs.modal", houseRoomsModalShownHandler);
+}
+
+function houseRoomsModalShownHandler() {
+    updateHouseRoomsList();
+}
+
+function updateHouseRoomsList() {
+    let newChildren = [];
+    let houseRooms = Object.values(houseRoomDetailMap).sort((a, b) => a.sortIndex - b.sortIndex);
+    player.houseRooms = [];
+
+    for (const room of Object.values(houseRooms)) {
+        let row = createElement("div", "row mb-2");
+
+        let nameCol = createElement("div", "col align-self-center", room.name);
+        row.appendChild(nameCol);
+
+        let levelCol = createElement("div", "col-md-auto");
+        let levelInput = createElement("input", "form-control");
+
+        levelInput.addEventListener("input", function() {
+            const inputValue = levelInput.value;
+            const hrid = room.hrid;
+            const existingIndex = player.houseRooms.findIndex(room => room.hrid === hrid);
+
+            if (existingIndex !== -1) {
+                player.houseRooms[existingIndex] = new HouseRoom(hrid, inputValue);
+            } else {
+                player.houseRooms.push(new HouseRoom(hrid, inputValue));
+            }
+        });
+
+        levelCol.appendChild(levelInput);
+        row.appendChild(levelCol);
+
+        newChildren.push(row);
+    }
+
+    let houseRoomsList = document.getElementById("houseRoomsList");
+    houseRoomsList.replaceChildren(...newChildren);
 }
 
 function initEnhancementLevelInput(equipmentType) {
@@ -1544,8 +1591,11 @@ function initImportExportModal() {
             zone: zoneSelect.value,
             simulationTime: simulationTimeInput.value,
         };
-        navigator.clipboard.writeText(JSON.stringify(state));
-        alert("Current set has been copied to clipboard.")
+            try {
+                navigator.clipboard.writeText(JSON.stringify(state)).then(() => alert("Current set has been copied to clipboard."));
+            } catch (err) {
+                alert('Error copying to clipboard: ' + err);
+            }
     });
 
     let importSetButton = document.getElementById("buttonImportSet");
@@ -1682,6 +1732,7 @@ darkModeToggle.addEventListener('change', () => {
 
 
 initEquipmentSection();
+initHouseRoomsModal();
 initLevelSection();
 initFoodSection();
 initDrinksSection();

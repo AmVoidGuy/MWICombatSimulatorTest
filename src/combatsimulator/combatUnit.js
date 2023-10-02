@@ -1,5 +1,6 @@
 class CombatUnit {
     isPlayer;
+    houseRooms = [];
     isStunned = false;
     stunExpireTime = null;
     isBlind = false;
@@ -113,15 +114,17 @@ class CombatUnit {
     constructor() {}
 
     updateCombatDetails() {
-        if(this.combatDetails.combatStats.HPRegen === 0) {
-            this.combatDetails.combatStats.HPRegen = 0.01;
-        } else {
-            this.combatDetails.combatStats.HPRegen = 0.01 + this.combatDetails.combatStats.HPRegen;
-        }
-        if(this.combatDetails.combatStats.MPRegen === 0) {
-            this.combatDetails.combatStats.MPRegen = 0.01;
-        } else {
-            this.combatDetails.combatStats.MPRegen = 0.01 + this.combatDetails.combatStats.MPRegen;
+        if(this.isPlayer) {
+            if(this.combatDetails.combatStats.HPRegen === 0) {
+                this.combatDetails.combatStats.HPRegen = 0.01;
+            } else {
+                this.combatDetails.combatStats.HPRegen = 0.01 + this.combatDetails.combatStats.HPRegen;
+            }
+            if(this.combatDetails.combatStats.MPRegen === 0) {
+                this.combatDetails.combatStats.MPRegen = 0.01;
+            } else {
+                this.combatDetails.combatStats.MPRegen = 0.01 + this.combatDetails.combatStats.MPRegen;
+            }
         }
 
         ["stamina", "intelligence", "attack", "power", "defense", "ranged", "magic"].forEach((stat) => {
@@ -185,7 +188,7 @@ class CombatUnit {
             (1 + this.combatDetails.combatStats.magicDamage) *
             (1 + damageRatioBoost);
 
-        let baseMagicEvasion = (10 + ((this.combatDetails.defenseLevel + this.combatDetails.rangedLevel) / 2)) * (1 + this.combatDetails.combatStats.magicEvasion);
+        let baseMagicEvasion = (10 + ((0.75 * this.combatDetails.defenseLevel + 0.25 * this.combatDetails.rangedLevel) / 2)) * (1 + this.combatDetails.combatStats.magicEvasion);
         this.combatDetails.magicEvasionRating = baseMagicEvasion;
         for (const boost of evasionBoosts) {
             this.combatDetails.magicEvasionRating += boost.flatBoost;
@@ -259,13 +262,22 @@ class CombatUnit {
         this.combatDetails.combatStats.naturePenetration += this.getBuffBoost("/buff_types/nature_penetration").flatBoost;
         this.combatDetails.combatStats.firePenetration += this.getBuffBoost("/buff_types/fire_penetration").flatBoost;
         this.combatDetails.combatStats.abilityHaste += this.getBuffBoost("/buff_types/ability_haste").flatBoost;
+        this.combatDetails.combatStats.combatRareFind += this.getBuffBoost("/buff_types/rare_find").flatBoost;
         this.combatDetails.combatStats.combatRareFind += (1 + this.combatDetails.combatStats.combatRareFind) * this.getBuffBoost("/buff_types/combat_rare_find").ratioBoost;
     }
 
     addBuff(buff, currentTime) {
         buff.startTime = currentTime;
-        this.combatBuffs[buff.uniqueHrid] = buff;
-
+        if(buff.uniqueHrid == "/buff_uniques/house") {
+            if(this.combatBuffs[buff.typeHrid]) {
+                this.combatBuffs[buff.typeHrid].flatBoost += buff.flatBoost;
+                this.combatBuffs[buff.typeHrid].ratioBoost += buff.ratioBoost;
+            } else {
+                this.combatBuffs[buff.typeHrid] = buff;
+            }
+        } else {
+            this.combatBuffs[buff.uniqueHrid] = buff;
+        }
         this.updateCombatDetails();
     }
 
@@ -282,7 +294,21 @@ class CombatUnit {
 
     clearBuffs() {
         this.combatBuffs = {};
+        for (let i = 0; i < this.houseRooms.length; i++) {
+            const houseRoom = this.houseRooms[i];
+            if (houseRoom) {
+                houseRoom.buffs.forEach((buff) => {
+                    this.addBuff(buff, 0);
+                });
+            }
+        }
         this.updateCombatDetails();
+    }
+
+    clearCCs() {
+        this.isStunned = false;
+        this.isSilenced = false;
+        this.isBlind = false;
     }
 
     getBuffBoosts(type) {
