@@ -1,4 +1,598 @@
 {
+  "/house_rooms/archery_range": {
+    "hrid": "/house_rooms/archery_range",
+    "name": "Archery Range",
+    "skillHrid": "/skills/ranged",
+    "usableInActionTypeMap": {
+      "/action_types/combat": true
+    },
+    "actionBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/ranged_level",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 1,
+        "flatBoostLevelBonus": 1,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "globalBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/wisdom",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.0005,
+        "flatBoostLevelBonus": 0.0005,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      },
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/rare_find",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "upgradeCostsMap": {
+      "1": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 500000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 75
+        },
+        {
+          "itemHrid": "/items/wooden_crossbow",
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/wooden_bow",
+          "count": 10
+        }
+      ],
+      "2": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 2000000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/wooden_crossbow",
+          "count": 18
+        },
+        {
+          "itemHrid": "/items/birch_crossbow",
+          "count": 18
+        },
+        {
+          "itemHrid": "/items/wooden_bow",
+          "count": 15
+        },
+        {
+          "itemHrid": "/items/birch_bow",
+          "count": 15
+        }
+      ],
+      "3": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 5000000
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/birch_crossbow",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/cedar_crossbow",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/birch_bow",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/cedar_bow",
+          "count": 20
+        }
+      ],
+      "4": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 12000000
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/cedar_crossbow",
+          "count": 30
+        },
+        {
+          "itemHrid": "/items/purpleheart_crossbow",
+          "count": 30
+        },
+        {
+          "itemHrid": "/items/cedar_bow",
+          "count": 25
+        },
+        {
+          "itemHrid": "/items/purpleheart_bow",
+          "count": 25
+        },
+        {
+          "itemHrid": "/items/ranged_coffee",
+          "count": 1000
+        }
+      ],
+      "5": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 25000000
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/purpleheart_crossbow",
+          "count": 36
+        },
+        {
+          "itemHrid": "/items/ginkgo_crossbow",
+          "count": 36
+        },
+        {
+          "itemHrid": "/items/purpleheart_bow",
+          "count": 30
+        },
+        {
+          "itemHrid": "/items/ginkgo_bow",
+          "count": 30
+        }
+      ],
+      "6": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 50000000
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/ginkgo_crossbow",
+          "count": 42
+        },
+        {
+          "itemHrid": "/items/redwood_crossbow",
+          "count": 42
+        },
+        {
+          "itemHrid": "/items/ginkgo_bow",
+          "count": 35
+        },
+        {
+          "itemHrid": "/items/redwood_bow",
+          "count": 35
+        }
+      ],
+      "7": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 90000000
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/redwood_crossbow",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/arcane_crossbow",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/redwood_bow",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/arcane_bow",
+          "count": 40
+        }
+      ],
+      "8": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 160000000
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 12000
+        },
+        {
+          "itemHrid": "/items/arcane_crossbow",
+          "count": 120
+        },
+        {
+          "itemHrid": "/items/arcane_bow",
+          "count": 100
+        },
+        {
+          "itemHrid": "/items/super_ranged_coffee",
+          "count": 2000
+        }
+      ]
+    },
+    "sortIndex": 15
+  },
+  "/house_rooms/armory": {
+    "hrid": "/house_rooms/armory",
+    "name": "Armory",
+    "skillHrid": "/skills/defense",
+    "usableInActionTypeMap": {
+      "/action_types/combat": true
+    },
+    "actionBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/defense_level",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 1,
+        "flatBoostLevelBonus": 1,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "globalBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/wisdom",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.0005,
+        "flatBoostLevelBonus": 0.0005,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      },
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/rare_find",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "upgradeCostsMap": {
+      "1": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 500000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 75
+        },
+        {
+          "itemHrid": "/items/cheese_helmet",
+          "count": 10
+        },
+        {
+          "itemHrid": "/items/cheese_plate_body",
+          "count": 10
+        },
+        {
+          "itemHrid": "/items/cheese_plate_legs",
+          "count": 10
+        }
+      ],
+      "2": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 2000000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/cheese_helmet",
+          "count": 15
+        },
+        {
+          "itemHrid": "/items/verdant_helmet",
+          "count": 15
+        },
+        {
+          "itemHrid": "/items/cheese_plate_body",
+          "count": 15
+        },
+        {
+          "itemHrid": "/items/verdant_plate_body",
+          "count": 15
+        },
+        {
+          "itemHrid": "/items/cheese_plate_legs",
+          "count": 15
+        },
+        {
+          "itemHrid": "/items/verdant_plate_legs",
+          "count": 15
+        }
+      ],
+      "3": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 5000000
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/verdant_helmet",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/azure_helmet",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/verdant_plate_body",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/azure_plate_body",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/verdant_plate_legs",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/azure_plate_legs",
+          "count": 20
+        }
+      ],
+      "4": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 12000000
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/azure_helmet",
+          "count": 25
+        },
+        {
+          "itemHrid": "/items/burble_helmet",
+          "count": 25
+        },
+        {
+          "itemHrid": "/items/azure_plate_body",
+          "count": 25
+        },
+        {
+          "itemHrid": "/items/burble_plate_body",
+          "count": 25
+        },
+        {
+          "itemHrid": "/items/azure_plate_legs",
+          "count": 25
+        },
+        {
+          "itemHrid": "/items/burble_plate_legs",
+          "count": 25
+        },
+        {
+          "itemHrid": "/items/defense_coffee",
+          "count": 1000
+        }
+      ],
+      "5": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 25000000
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/burble_helmet",
+          "count": 30
+        },
+        {
+          "itemHrid": "/items/crimson_helmet",
+          "count": 30
+        },
+        {
+          "itemHrid": "/items/burble_plate_body",
+          "count": 30
+        },
+        {
+          "itemHrid": "/items/crimson_plate_body",
+          "count": 30
+        },
+        {
+          "itemHrid": "/items/burble_plate_legs",
+          "count": 30
+        },
+        {
+          "itemHrid": "/items/crimson_plate_legs",
+          "count": 30
+        }
+      ],
+      "6": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 50000000
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/crimson_helmet",
+          "count": 35
+        },
+        {
+          "itemHrid": "/items/rainbow_helmet",
+          "count": 35
+        },
+        {
+          "itemHrid": "/items/crimson_plate_body",
+          "count": 35
+        },
+        {
+          "itemHrid": "/items/rainbow_plate_body",
+          "count": 35
+        },
+        {
+          "itemHrid": "/items/crimson_plate_legs",
+          "count": 35
+        },
+        {
+          "itemHrid": "/items/rainbow_plate_legs",
+          "count": 35
+        }
+      ],
+      "7": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 90000000
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/rainbow_helmet",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/holy_helmet",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/rainbow_plate_body",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/holy_plate_body",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/rainbow_plate_legs",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/holy_plate_legs",
+          "count": 40
+        }
+      ],
+      "8": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 160000000
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 12000
+        },
+        {
+          "itemHrid": "/items/holy_helmet",
+          "count": 100
+        },
+        {
+          "itemHrid": "/items/holy_plate_body",
+          "count": 100
+        },
+        {
+          "itemHrid": "/items/holy_plate_legs",
+          "count": 100
+        },
+        {
+          "itemHrid": "/items/super_defense_coffee",
+          "count": 2000
+        }
+      ]
+    },
+    "sortIndex": 14
+  },
   "/house_rooms/brewery": {
     "hrid": "/house_rooms/brewery",
     "name": "Brewery",
@@ -34,8 +628,8 @@
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
-        "flatBoost": 0.001,
-        "flatBoostLevelBonus": 0.001,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
         "startTime": "0001-01-01T00:00:00Z",
         "duration": 0
       }
@@ -351,8 +945,8 @@
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
-        "flatBoost": 0.001,
-        "flatBoostLevelBonus": 0.001,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
         "startTime": "0001-01-01T00:00:00Z",
         "duration": 0
       }
@@ -585,6 +1179,596 @@
     },
     "sortIndex": 1
   },
+  "/house_rooms/dining_room": {
+    "hrid": "/house_rooms/dining_room",
+    "name": "Dining Room",
+    "skillHrid": "/skills/stamina",
+    "usableInActionTypeMap": {
+      "/action_types/combat": true
+    },
+    "actionBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/stamina_level",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 1,
+        "flatBoostLevelBonus": 1,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      },
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/hp_regen",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.0005,
+        "flatBoostLevelBonus": 0.0005,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "globalBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/wisdom",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.0005,
+        "flatBoostLevelBonus": 0.0005,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      },
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/rare_find",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "upgradeCostsMap": {
+      "1": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 500000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 75
+        },
+        {
+          "itemHrid": "/items/donut",
+          "count": 125
+        },
+        {
+          "itemHrid": "/items/cupcake",
+          "count": 125
+        },
+        {
+          "itemHrid": "/items/small_pouch",
+          "count": 1
+        }
+      ],
+      "2": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 2000000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/donut",
+          "count": 250
+        },
+        {
+          "itemHrid": "/items/blueberry_donut",
+          "count": 250
+        },
+        {
+          "itemHrid": "/items/cupcake",
+          "count": 250
+        },
+        {
+          "itemHrid": "/items/blueberry_cake",
+          "count": 250
+        },
+        {
+          "itemHrid": "/items/small_pouch",
+          "count": 3
+        }
+      ],
+      "3": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 5000000
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/blueberry_donut",
+          "count": 500
+        },
+        {
+          "itemHrid": "/items/blackberry_donut",
+          "count": 500
+        },
+        {
+          "itemHrid": "/items/blueberry_cake",
+          "count": 500
+        },
+        {
+          "itemHrid": "/items/blackberry_cake",
+          "count": 500
+        },
+        {
+          "itemHrid": "/items/medium_pouch",
+          "count": 1
+        }
+      ],
+      "4": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 12000000
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/blackberry_donut",
+          "count": 1000
+        },
+        {
+          "itemHrid": "/items/strawberry_donut",
+          "count": 1000
+        },
+        {
+          "itemHrid": "/items/blackberry_cake",
+          "count": 1000
+        },
+        {
+          "itemHrid": "/items/strawberry_cake",
+          "count": 1000
+        },
+        {
+          "itemHrid": "/items/medium_pouch",
+          "count": 3
+        },
+        {
+          "itemHrid": "/items/stamina_coffee",
+          "count": 1000
+        }
+      ],
+      "5": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 25000000
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/strawberry_donut",
+          "count": 2000
+        },
+        {
+          "itemHrid": "/items/mooberry_donut",
+          "count": 2000
+        },
+        {
+          "itemHrid": "/items/strawberry_cake",
+          "count": 2000
+        },
+        {
+          "itemHrid": "/items/mooberry_cake",
+          "count": 2000
+        },
+        {
+          "itemHrid": "/items/large_pouch",
+          "count": 1
+        }
+      ],
+      "6": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 50000000
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/mooberry_donut",
+          "count": 4000
+        },
+        {
+          "itemHrid": "/items/marsberry_donut",
+          "count": 4000
+        },
+        {
+          "itemHrid": "/items/mooberry_cake",
+          "count": 4000
+        },
+        {
+          "itemHrid": "/items/marsberry_cake",
+          "count": 4000
+        },
+        {
+          "itemHrid": "/items/large_pouch",
+          "count": 3
+        }
+      ],
+      "7": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 90000000
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/marsberry_donut",
+          "count": 8000
+        },
+        {
+          "itemHrid": "/items/spaceberry_donut",
+          "count": 8000
+        },
+        {
+          "itemHrid": "/items/marsberry_cake",
+          "count": 8000
+        },
+        {
+          "itemHrid": "/items/spaceberry_cake",
+          "count": 8000
+        },
+        {
+          "itemHrid": "/items/giant_pouch",
+          "count": 1
+        }
+      ],
+      "8": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 160000000
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 12000
+        },
+        {
+          "itemHrid": "/items/spaceberry_donut",
+          "count": 20000
+        },
+        {
+          "itemHrid": "/items/spaceberry_cake",
+          "count": 20000
+        },
+        {
+          "itemHrid": "/items/giant_pouch",
+          "count": 3
+        },
+        {
+          "itemHrid": "/items/super_stamina_coffee",
+          "count": 2000
+        }
+      ]
+    },
+    "sortIndex": 10
+  },
+  "/house_rooms/dojo": {
+    "hrid": "/house_rooms/dojo",
+    "name": "Dojo",
+    "skillHrid": "/skills/attack",
+    "usableInActionTypeMap": {
+      "/action_types/combat": true
+    },
+    "actionBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/attack_level",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 1,
+        "flatBoostLevelBonus": 1,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      },
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/attack_speed",
+        "ratioBoost": 0.005,
+        "ratioBoostLevelBonus": 0.005,
+        "flatBoost": 0,
+        "flatBoostLevelBonus": 0,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "globalBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/wisdom",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.0005,
+        "flatBoostLevelBonus": 0.0005,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      },
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/rare_find",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "upgradeCostsMap": {
+      "1": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 500000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 75
+        },
+        {
+          "itemHrid": "/items/cheese_spear",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/cheese_sword",
+          "count": 8
+        }
+      ],
+      "2": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 2000000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/cheese_spear",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/verdant_spear",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/cheese_sword",
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/verdant_sword",
+          "count": 12
+        }
+      ],
+      "3": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 5000000
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/verdant_spear",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/azure_spear",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/verdant_sword",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/azure_sword",
+          "count": 16
+        }
+      ],
+      "4": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 12000000
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/azure_spear",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/burble_spear",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/azure_sword",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/burble_sword",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/attack_coffee",
+          "count": 1000
+        }
+      ],
+      "5": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 25000000
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/burble_spear",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/crimson_spear",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/burble_sword",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/crimson_sword",
+          "count": 24
+        }
+      ],
+      "6": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 50000000
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/crimson_spear",
+          "count": 56
+        },
+        {
+          "itemHrid": "/items/rainbow_spear",
+          "count": 56
+        },
+        {
+          "itemHrid": "/items/crimson_sword",
+          "count": 28
+        },
+        {
+          "itemHrid": "/items/rainbow_sword",
+          "count": 28
+        }
+      ],
+      "7": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 90000000
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/rainbow_spear",
+          "count": 64
+        },
+        {
+          "itemHrid": "/items/holy_spear",
+          "count": 64
+        },
+        {
+          "itemHrid": "/items/rainbow_sword",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/holy_sword",
+          "count": 32
+        }
+      ],
+      "8": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 160000000
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 12000
+        },
+        {
+          "itemHrid": "/items/holy_spear",
+          "count": 160
+        },
+        {
+          "itemHrid": "/items/holy_sword",
+          "count": 80
+        },
+        {
+          "itemHrid": "/items/super_attack_coffee",
+          "count": 2000
+        }
+      ]
+    },
+    "sortIndex": 12
+  },
   "/house_rooms/forge": {
     "hrid": "/house_rooms/forge",
     "name": "Forge",
@@ -620,8 +1804,8 @@
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
-        "flatBoost": 0.001,
-        "flatBoostLevelBonus": 0.001,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
         "startTime": "0001-01-01T00:00:00Z",
         "duration": 0
       }
@@ -889,8 +2073,8 @@
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
-        "flatBoost": 0.001,
-        "flatBoostLevelBonus": 0.001,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
         "startTime": "0001-01-01T00:00:00Z",
         "duration": 0
       }
@@ -1227,6 +2411,275 @@
     },
     "sortIndex": 2
   },
+  "/house_rooms/gym": {
+    "hrid": "/house_rooms/gym",
+    "name": "Gym",
+    "skillHrid": "/skills/power",
+    "usableInActionTypeMap": {
+      "/action_types/combat": true
+    },
+    "actionBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/power_level",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 1,
+        "flatBoostLevelBonus": 1,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "globalBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/wisdom",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.0005,
+        "flatBoostLevelBonus": 0.0005,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      },
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/rare_find",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "upgradeCostsMap": {
+      "1": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 500000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 75
+        },
+        {
+          "itemHrid": "/items/cheese_mace",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/cheese_sword",
+          "count": 8
+        }
+      ],
+      "2": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 2000000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/cheese_mace",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/verdant_mace",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/cheese_sword",
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/verdant_sword",
+          "count": 12
+        }
+      ],
+      "3": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 5000000
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/verdant_mace",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/azure_mace",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/verdant_sword",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/azure_sword",
+          "count": 16
+        }
+      ],
+      "4": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 12000000
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/azure_mace",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/burble_mace",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/azure_sword",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/burble_sword",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/power_coffee",
+          "count": 1000
+        }
+      ],
+      "5": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 25000000
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/burble_mace",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/crimson_mace",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/burble_sword",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/crimson_sword",
+          "count": 24
+        }
+      ],
+      "6": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 50000000
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/crimson_mace",
+          "count": 56
+        },
+        {
+          "itemHrid": "/items/rainbow_mace",
+          "count": 56
+        },
+        {
+          "itemHrid": "/items/crimson_sword",
+          "count": 28
+        },
+        {
+          "itemHrid": "/items/rainbow_sword",
+          "count": 28
+        }
+      ],
+      "7": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 90000000
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/rainbow_mace",
+          "count": 64
+        },
+        {
+          "itemHrid": "/items/holy_mace",
+          "count": 64
+        },
+        {
+          "itemHrid": "/items/rainbow_sword",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/holy_sword",
+          "count": 32
+        }
+      ],
+      "8": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 160000000
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 12000
+        },
+        {
+          "itemHrid": "/items/holy_mace",
+          "count": 160
+        },
+        {
+          "itemHrid": "/items/holy_sword",
+          "count": 80
+        },
+        {
+          "itemHrid": "/items/super_power_coffee",
+          "count": 2000
+        }
+      ]
+    },
+    "sortIndex": 13
+  },
   "/house_rooms/kitchen": {
     "hrid": "/house_rooms/kitchen",
     "name": "Kitchen",
@@ -1262,8 +2715,8 @@
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
-        "flatBoost": 0.001,
-        "flatBoostLevelBonus": 0.001,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
         "startTime": "0001-01-01T00:00:00Z",
         "duration": 0
       }
@@ -1597,8 +3050,18 @@
         "typeHrid": "/buff_types/action_speed",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
-        "flatBoost": 0.015,
-        "flatBoostLevelBonus": 0.015,
+        "flatBoost": 0.01,
+        "flatBoostLevelBonus": 0.01,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      },
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/enhancing_success",
+        "ratioBoost": 0.0005,
+        "ratioBoostLevelBonus": 0.0005,
+        "flatBoost": 0,
+        "flatBoostLevelBonus": 0,
         "startTime": "0001-01-01T00:00:00Z",
         "duration": 0
       }
@@ -1619,8 +3082,8 @@
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
-        "flatBoost": 0.001,
-        "flatBoostLevelBonus": 0.001,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
         "startTime": "0001-01-01T00:00:00Z",
         "duration": 0
       }
@@ -1853,6 +3316,389 @@
     },
     "sortIndex": 9
   },
+  "/house_rooms/library": {
+    "hrid": "/house_rooms/library",
+    "name": "Library",
+    "skillHrid": "/skills/intelligence",
+    "usableInActionTypeMap": {
+      "/action_types/combat": true
+    },
+    "actionBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/intelligence_level",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 1,
+        "flatBoostLevelBonus": 1,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      },
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/mp_regen",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.0005,
+        "flatBoostLevelBonus": 0.0005,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "globalBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/wisdom",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.0005,
+        "flatBoostLevelBonus": 0.0005,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      },
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/rare_find",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "upgradeCostsMap": {
+      "1": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 500000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 75
+        },
+        {
+          "itemHrid": "/items/gummy",
+          "count": 250
+        },
+        {
+          "itemHrid": "/items/yogurt",
+          "count": 250
+        },
+        {
+          "itemHrid": "/items/poke",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/scratch",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/smack",
+          "count": 2
+        }
+      ],
+      "2": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 2000000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/gummy",
+          "count": 500
+        },
+        {
+          "itemHrid": "/items/apple_gummy",
+          "count": 250
+        },
+        {
+          "itemHrid": "/items/yogurt",
+          "count": 500
+        },
+        {
+          "itemHrid": "/items/apple_yogurt",
+          "count": 250
+        },
+        {
+          "itemHrid": "/items/quick_shot",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/water_strike",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/entangle",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/fireball",
+          "count": 2
+        }
+      ],
+      "3": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 5000000
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/apple_gummy",
+          "count": 500
+        },
+        {
+          "itemHrid": "/items/orange_gummy",
+          "count": 500
+        },
+        {
+          "itemHrid": "/items/apple_yogurt",
+          "count": 500
+        },
+        {
+          "itemHrid": "/items/orange_yogurt",
+          "count": 500
+        },
+        {
+          "itemHrid": "/items/toughness",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/precision",
+          "count": 2
+        }
+      ],
+      "4": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 12000000
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/orange_gummy",
+          "count": 1000
+        },
+        {
+          "itemHrid": "/items/plum_gummy",
+          "count": 1000
+        },
+        {
+          "itemHrid": "/items/orange_yogurt",
+          "count": 1000
+        },
+        {
+          "itemHrid": "/items/plum_yogurt",
+          "count": 1000
+        },
+        {
+          "itemHrid": "/items/pierce",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/cleave",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/sweep",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/intelligence_coffee",
+          "count": 1000
+        }
+      ],
+      "5": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 25000000
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/plum_gummy",
+          "count": 2000
+        },
+        {
+          "itemHrid": "/items/peach_gummy",
+          "count": 2000
+        },
+        {
+          "itemHrid": "/items/plum_yogurt",
+          "count": 2000
+        },
+        {
+          "itemHrid": "/items/peach_yogurt",
+          "count": 2000
+        },
+        {
+          "itemHrid": "/items/rain_of_arrows",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/ice_spear",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/flame_blast",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/toxic_pollen",
+          "count": 2
+        }
+      ],
+      "6": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 50000000
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/peach_gummy",
+          "count": 4000
+        },
+        {
+          "itemHrid": "/items/dragon_fruit_gummy",
+          "count": 4000
+        },
+        {
+          "itemHrid": "/items/peach_yogurt",
+          "count": 4000
+        },
+        {
+          "itemHrid": "/items/dragon_fruit_yogurt",
+          "count": 4000
+        },
+        {
+          "itemHrid": "/items/berserk",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/frenzy",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/elemental_affinity",
+          "count": 2
+        }
+      ],
+      "7": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 90000000
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/dragon_fruit_gummy",
+          "count": 8000
+        },
+        {
+          "itemHrid": "/items/star_fruit_gummy",
+          "count": 8000
+        },
+        {
+          "itemHrid": "/items/dragon_fruit_yogurt",
+          "count": 8000
+        },
+        {
+          "itemHrid": "/items/star_fruit_yogurt",
+          "count": 8000
+        },
+        {
+          "itemHrid": "/items/puncture",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/maim",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/stunning_blow",
+          "count": 2
+        }
+      ],
+      "8": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 160000000
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 12000
+        },
+        {
+          "itemHrid": "/items/star_fruit_gummy",
+          "count": 20000
+        },
+        {
+          "itemHrid": "/items/star_fruit_yogurt",
+          "count": 20000
+        },
+        {
+          "itemHrid": "/items/silencing_shot",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/frost_surge",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/natures_veil",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/firestorm",
+          "count": 2
+        },
+        {
+          "itemHrid": "/items/super_intelligence_coffee",
+          "count": 2000
+        }
+      ]
+    },
+    "sortIndex": 11
+  },
   "/house_rooms/log_shed": {
     "hrid": "/house_rooms/log_shed",
     "name": "Log Shed",
@@ -1888,8 +3734,8 @@
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
-        "flatBoost": 0.001,
-        "flatBoostLevelBonus": 0.001,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
         "startTime": "0001-01-01T00:00:00Z",
         "duration": 0
       }
@@ -2122,6 +3968,331 @@
     },
     "sortIndex": 3
   },
+  "/house_rooms/mystical_study": {
+    "hrid": "/house_rooms/mystical_study",
+    "name": "Mystical Study",
+    "skillHrid": "/skills/magic",
+    "usableInActionTypeMap": {
+      "/action_types/combat": true
+    },
+    "actionBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/magic_level",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 1,
+        "flatBoostLevelBonus": 1,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "globalBuffs": [
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/wisdom",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.0005,
+        "flatBoostLevelBonus": 0.0005,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      },
+      {
+        "uniqueHrid": "/buff_uniques/house",
+        "typeHrid": "/buff_types/rare_find",
+        "ratioBoost": 0,
+        "ratioBoostLevelBonus": 0,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
+        "startTime": "0001-01-01T00:00:00Z",
+        "duration": 0
+      }
+    ],
+    "upgradeCostsMap": {
+      "1": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 500000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 75
+        },
+        {
+          "itemHrid": "/items/wooden_water_staff",
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/wooden_nature_staff",
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/wooden_fire_staff",
+          "count": 8
+        }
+      ],
+      "2": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 2000000
+        },
+        {
+          "itemHrid": "/items/lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 150
+        },
+        {
+          "itemHrid": "/items/wooden_water_staff",
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/birch_water_staff",
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/wooden_nature_staff",
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/birch_nature_staff",
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/wooden_fire_staff",
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/birch_fire_staff",
+          "count": 12
+        }
+      ],
+      "3": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 5000000
+        },
+        {
+          "itemHrid": "/items/birch_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 300
+        },
+        {
+          "itemHrid": "/items/birch_water_staff",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/cedar_water_staff",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/birch_nature_staff",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/cedar_nature_staff",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/birch_fire_staff",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/cedar_fire_staff",
+          "count": 16
+        }
+      ],
+      "4": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 12000000
+        },
+        {
+          "itemHrid": "/items/cedar_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 600
+        },
+        {
+          "itemHrid": "/items/cedar_water_staff",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/purpleheart_water_staff",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/cedar_nature_staff",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/purpleheart_nature_staff",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/cedar_fire_staff",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/purpleheart_fire_staff",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/magic_coffee",
+          "count": 1000
+        }
+      ],
+      "5": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 25000000
+        },
+        {
+          "itemHrid": "/items/purpleheart_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 1200
+        },
+        {
+          "itemHrid": "/items/purpleheart_water_staff",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/ginkgo_water_staff",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/purpleheart_nature_staff",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/ginkgo_nature_staff",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/purpleheart_fire_staff",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/ginkgo_fire_staff",
+          "count": 24
+        }
+      ],
+      "6": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 50000000
+        },
+        {
+          "itemHrid": "/items/ginkgo_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 2400
+        },
+        {
+          "itemHrid": "/items/ginkgo_water_staff",
+          "count": 28
+        },
+        {
+          "itemHrid": "/items/redwood_water_staff",
+          "count": 28
+        },
+        {
+          "itemHrid": "/items/ginkgo_nature_staff",
+          "count": 28
+        },
+        {
+          "itemHrid": "/items/redwood_nature_staff",
+          "count": 28
+        },
+        {
+          "itemHrid": "/items/ginkgo_fire_staff",
+          "count": 28
+        },
+        {
+          "itemHrid": "/items/redwood_fire_staff",
+          "count": 28
+        }
+      ],
+      "7": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 90000000
+        },
+        {
+          "itemHrid": "/items/redwood_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 4800
+        },
+        {
+          "itemHrid": "/items/redwood_water_staff",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/arcane_water_staff",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/redwood_nature_staff",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/arcane_nature_staff",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/redwood_fire_staff",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/arcane_fire_staff",
+          "count": 32
+        }
+      ],
+      "8": [
+        {
+          "itemHrid": "/items/coin",
+          "count": 160000000
+        },
+        {
+          "itemHrid": "/items/arcane_lumber",
+          "count": 12000
+        },
+        {
+          "itemHrid": "/items/arcane_water_staff",
+          "count": 80
+        },
+        {
+          "itemHrid": "/items/arcane_nature_staff",
+          "count": 80
+        },
+        {
+          "itemHrid": "/items/arcane_fire_staff",
+          "count": 80
+        },
+        {
+          "itemHrid": "/items/super_magic_coffee",
+          "count": 2000
+        }
+      ]
+    },
+    "sortIndex": 16
+  },
   "/house_rooms/sewing_parlor": {
     "hrid": "/house_rooms/sewing_parlor",
     "name": "Sewing Parlor",
@@ -2157,8 +4328,8 @@
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
-        "flatBoost": 0.001,
-        "flatBoostLevelBonus": 0.001,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
         "startTime": "0001-01-01T00:00:00Z",
         "duration": 0
       }
@@ -2466,8 +4637,8 @@
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
-        "flatBoost": 0.001,
-        "flatBoostLevelBonus": 0.001,
+        "flatBoost": 0.002,
+        "flatBoostLevelBonus": 0.002,
         "startTime": "0001-01-01T00:00:00Z",
         "duration": 0
       }
