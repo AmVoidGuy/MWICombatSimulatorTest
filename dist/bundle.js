@@ -1391,7 +1391,7 @@ let drinks = [null, null, null];
 let abilities = [null, null, null, null];
 let triggerMap = {};
 let modalTriggers = [];
-
+let modalData = {};
 // #region Worker
 
 worker.onmessage = function (event) {
@@ -1450,16 +1450,23 @@ function initEquipmentSelect(equipmentType) {
 function initHouseRoomsModal() {
     let houseRoomsModal = document.getElementById("houseRoomsModal");
     houseRoomsModal.addEventListener("show.bs.modal", houseRoomsModalShownHandler);
+    houseRoomsModal.addEventListener("hidden.bs.modal", houseRoomsModalUpdatePlayerState);
 }
 
 function houseRoomsModalShownHandler() {
     updateHouseRoomsList();
 }
 
+function houseRoomsModalUpdatePlayerState() {
+    player.houseRooms = [];
+    for (const key in modalData) {
+        player.houseRooms.push((new _combatsimulator_houseRoom__WEBPACK_IMPORTED_MODULE_7__["default"](key, modalData[key])));
+    }
+}
+
 function updateHouseRoomsList() {
     let newChildren = [];
     let houseRooms = Object.values(_combatsimulator_data_houseRoomDetailMap_json__WEBPACK_IMPORTED_MODULE_4__).sort((a, b) => a.sortIndex - b.sortIndex);
-    player.houseRooms = [];
 
     for (const room of Object.values(houseRooms)) {
         let row = createElement("div", "row mb-2");
@@ -1470,15 +1477,17 @@ function updateHouseRoomsList() {
         let levelCol = createElement("div", "col-md-auto");
         let levelInput = createElement("input", "form-control");
 
+        if (modalData[room.hrid] !== undefined) {
+            levelInput.value = modalData[room.hrid];
+        }
+
         levelInput.addEventListener("input", function() {
             const inputValue = levelInput.value;
             const hrid = room.hrid;
-            const existingIndex = player.houseRooms.findIndex(room => room.hrid === hrid);
-
-            if (existingIndex !== -1) {
-                player.houseRooms[existingIndex] = new _combatsimulator_houseRoom__WEBPACK_IMPORTED_MODULE_7__["default"](hrid, inputValue);
+            if (inputValue !== '' && inputValue !== '0') {
+                modalData[hrid] = inputValue;
             } else {
-                player.houseRooms.push(new _combatsimulator_houseRoom__WEBPACK_IMPORTED_MODULE_7__["default"](hrid, inputValue));
+                delete modalData[hrid];
             }
         });
 
@@ -2812,6 +2821,7 @@ function getEquipmentSetFromUI() {
         drinks: {},
         abilities: {},
         triggerMap: {},
+        houseRooms: {},
     };
 
     ["stamina", "intelligence", "attack", "power", "defense", "ranged", "magic"].forEach((skill) => {
@@ -2849,7 +2859,7 @@ function getEquipmentSetFromUI() {
     }
 
     equipmentSet.triggerMap = triggerMap;
-
+    equipmentSet.houseRooms = modalData;
     return equipmentSet;
 }
 
@@ -2886,7 +2896,11 @@ function loadEquipmentSetIntoUI(equipmentSet) {
     }
 
     triggerMap = equipmentSet.triggerMap;
-
+    if(equipmentSet.houseRooms) {
+        modalData = equipmentSet.houseRooms;
+    } else {
+        modalData = {};
+    }
     updateState();
     updateUI();
 }
@@ -2952,6 +2966,7 @@ function initImportExportModal() {
             triggerMap: triggerMap,
             zone: zoneSelect.value,
             simulationTime: simulationTimeInput.value,
+            houseRooms: modalData,
         };
             try {
                 navigator.clipboard.writeText(JSON.stringify(state)).then(() => alert("Current set has been copied to clipboard."));
@@ -3029,6 +3044,12 @@ function initImportExportModal() {
         zoneSelect.value = importSet["zone"];
         let simulationDuration = document.getElementById("inputSimulationTime");
         simulationDuration.value = importSet["simulationTime"];
+        if(importSet["houseRooms"]) {
+            modalData = importSet["houseRooms"];
+        } else {
+            modalData = {};
+        }
+
         updateState();
         updateUI();
     });
@@ -3065,6 +3086,7 @@ function showErrorModal(error) {
 // #endregion
 
 function updateState() {
+    houseRoomsModalUpdatePlayerState();
     updateEquipmentState();
     updateLevels();
     updateFoodState();
