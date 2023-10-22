@@ -8,7 +8,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_ranged_level",
         "typeHrid": "/buff_types/ranged_level",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -20,7 +20,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -30,7 +30,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -52,11 +52,31 @@
         },
         {
           "itemHrid": "/items/wooden_crossbow",
-          "count": 12
+          "count": 6
         },
         {
           "itemHrid": "/items/wooden_bow",
-          "count": 10
+          "count": 4
+        },
+        {
+          "itemHrid": "/items/rough_hood",
+          "count": 4
+        },
+        {
+          "itemHrid": "/items/rough_tunic",
+          "count": 4
+        },
+        {
+          "itemHrid": "/items/rough_chaps",
+          "count": 4
+        },
+        {
+          "itemHrid": "/items/rough_bracers",
+          "count": 4
+        },
+        {
+          "itemHrid": "/items/rough_boots",
+          "count": 4
         }
       ],
       "2": [
@@ -74,19 +94,39 @@
         },
         {
           "itemHrid": "/items/wooden_crossbow",
-          "count": 18
+          "count": 9
         },
         {
           "itemHrid": "/items/birch_crossbow",
-          "count": 18
+          "count": 9
         },
         {
           "itemHrid": "/items/wooden_bow",
-          "count": 15
+          "count": 6
         },
         {
           "itemHrid": "/items/birch_bow",
-          "count": 15
+          "count": 6
+        },
+        {
+          "itemHrid": "/items/reptile_hood",
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/reptile_tunic",
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/reptile_chaps",
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/reptile_bracers",
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/reptile_boots",
+          "count": 8
         }
       ],
       "3": [
@@ -104,19 +144,39 @@
         },
         {
           "itemHrid": "/items/birch_crossbow",
-          "count": 24
+          "count": 12
         },
         {
           "itemHrid": "/items/cedar_crossbow",
-          "count": 24
+          "count": 12
         },
         {
           "itemHrid": "/items/birch_bow",
-          "count": 20
+          "count": 8
         },
         {
           "itemHrid": "/items/cedar_bow",
-          "count": 20
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/reptile_hood",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/reptile_tunic",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/reptile_chaps",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/reptile_bracers",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/reptile_boots",
+          "count": 16
         }
       ],
       "4": [
@@ -134,19 +194,39 @@
         },
         {
           "itemHrid": "/items/cedar_crossbow",
-          "count": 30
+          "count": 15
         },
         {
           "itemHrid": "/items/purpleheart_crossbow",
-          "count": 30
+          "count": 15
         },
         {
           "itemHrid": "/items/cedar_bow",
-          "count": 25
+          "count": 10
         },
         {
           "itemHrid": "/items/purpleheart_bow",
-          "count": 25
+          "count": 10
+        },
+        {
+          "itemHrid": "/items/gobo_hood",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/gobo_tunic",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/gobo_chaps",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/gobo_bracers",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/gobo_boots",
+          "count": 16
         },
         {
           "itemHrid": "/items/ranged_coffee",
@@ -168,19 +248,39 @@
         },
         {
           "itemHrid": "/items/purpleheart_crossbow",
-          "count": 36
+          "count": 18
         },
         {
           "itemHrid": "/items/ginkgo_crossbow",
-          "count": 36
+          "count": 18
         },
         {
           "itemHrid": "/items/purpleheart_bow",
-          "count": 30
+          "count": 12
         },
         {
           "itemHrid": "/items/ginkgo_bow",
-          "count": 30
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/gobo_hood",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/gobo_tunic",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/gobo_chaps",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/gobo_bracers",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/gobo_boots",
+          "count": 32
         }
       ],
       "6": [
@@ -198,19 +298,39 @@
         },
         {
           "itemHrid": "/items/ginkgo_crossbow",
-          "count": 42
+          "count": 21
         },
         {
           "itemHrid": "/items/redwood_crossbow",
-          "count": 42
+          "count": 21
         },
         {
           "itemHrid": "/items/ginkgo_bow",
-          "count": 35
+          "count": 14
         },
         {
           "itemHrid": "/items/redwood_bow",
-          "count": 35
+          "count": 14
+        },
+        {
+          "itemHrid": "/items/beast_hood",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/beast_tunic",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/beast_chaps",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/beast_bracers",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/beast_boots",
+          "count": 24
         }
       ],
       "7": [
@@ -228,19 +348,39 @@
         },
         {
           "itemHrid": "/items/redwood_crossbow",
-          "count": 48
+          "count": 24
         },
         {
           "itemHrid": "/items/arcane_crossbow",
-          "count": 48
+          "count": 24
         },
         {
           "itemHrid": "/items/redwood_bow",
-          "count": 40
+          "count": 16
         },
         {
           "itemHrid": "/items/arcane_bow",
-          "count": 40
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/beast_hood",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/beast_tunic",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/beast_chaps",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/beast_bracers",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/beast_boots",
+          "count": 48
         }
       ],
       "8": [
@@ -254,11 +394,31 @@
         },
         {
           "itemHrid": "/items/arcane_crossbow",
-          "count": 120
+          "count": 60
         },
         {
           "itemHrid": "/items/arcane_bow",
-          "count": 100
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/umbral_hood",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/umbral_tunic",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/umbral_chaps",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/umbral_bracers",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/umbral_boots",
+          "count": 40
         },
         {
           "itemHrid": "/items/super_ranged_coffee",
@@ -277,7 +437,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_defense_level",
         "typeHrid": "/buff_types/defense_level",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -289,7 +449,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -299,7 +459,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -321,15 +481,23 @@
         },
         {
           "itemHrid": "/items/cheese_helmet",
-          "count": 10
+          "count": 8
         },
         {
           "itemHrid": "/items/cheese_plate_body",
-          "count": 10
+          "count": 8
         },
         {
           "itemHrid": "/items/cheese_plate_legs",
-          "count": 10
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/cheese_gauntlets",
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/cheese_boots",
+          "count": 8
         }
       ],
       "2": [
@@ -347,27 +515,43 @@
         },
         {
           "itemHrid": "/items/cheese_helmet",
-          "count": 15
+          "count": 12
         },
         {
           "itemHrid": "/items/verdant_helmet",
-          "count": 15
+          "count": 12
         },
         {
           "itemHrid": "/items/cheese_plate_body",
-          "count": 15
+          "count": 12
         },
         {
           "itemHrid": "/items/verdant_plate_body",
-          "count": 15
+          "count": 12
         },
         {
           "itemHrid": "/items/cheese_plate_legs",
-          "count": 15
+          "count": 12
         },
         {
           "itemHrid": "/items/verdant_plate_legs",
-          "count": 15
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/cheese_gauntlets",
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/verdant_gauntlets",
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/cheese_boots",
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/verdant_boots",
+          "count": 12
         }
       ],
       "3": [
@@ -385,27 +569,43 @@
         },
         {
           "itemHrid": "/items/verdant_helmet",
-          "count": 20
+          "count": 16
         },
         {
           "itemHrid": "/items/azure_helmet",
-          "count": 20
+          "count": 16
         },
         {
           "itemHrid": "/items/verdant_plate_body",
-          "count": 20
+          "count": 16
         },
         {
           "itemHrid": "/items/azure_plate_body",
-          "count": 20
+          "count": 16
         },
         {
           "itemHrid": "/items/verdant_plate_legs",
-          "count": 20
+          "count": 16
         },
         {
           "itemHrid": "/items/azure_plate_legs",
-          "count": 20
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/verdant_gauntlets",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/azure_gauntlets",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/verdant_boots",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/azure_boots",
+          "count": 16
         }
       ],
       "4": [
@@ -423,27 +623,43 @@
         },
         {
           "itemHrid": "/items/azure_helmet",
-          "count": 25
+          "count": 20
         },
         {
           "itemHrid": "/items/burble_helmet",
-          "count": 25
+          "count": 20
         },
         {
           "itemHrid": "/items/azure_plate_body",
-          "count": 25
+          "count": 20
         },
         {
           "itemHrid": "/items/burble_plate_body",
-          "count": 25
+          "count": 20
         },
         {
           "itemHrid": "/items/azure_plate_legs",
-          "count": 25
+          "count": 20
         },
         {
           "itemHrid": "/items/burble_plate_legs",
-          "count": 25
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/azure_gauntlets",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/burble_gauntlets",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/azure_boots",
+          "count": 20
+        },
+        {
+          "itemHrid": "/items/burble_boots",
+          "count": 20
         },
         {
           "itemHrid": "/items/defense_coffee",
@@ -465,27 +681,43 @@
         },
         {
           "itemHrid": "/items/burble_helmet",
-          "count": 30
+          "count": 24
         },
         {
           "itemHrid": "/items/crimson_helmet",
-          "count": 30
+          "count": 24
         },
         {
           "itemHrid": "/items/burble_plate_body",
-          "count": 30
+          "count": 24
         },
         {
           "itemHrid": "/items/crimson_plate_body",
-          "count": 30
+          "count": 24
         },
         {
           "itemHrid": "/items/burble_plate_legs",
-          "count": 30
+          "count": 24
         },
         {
           "itemHrid": "/items/crimson_plate_legs",
-          "count": 30
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/burble_gauntlets",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/crimson_gauntlets",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/burble_boots",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/crimson_boots",
+          "count": 24
         }
       ],
       "6": [
@@ -503,27 +735,43 @@
         },
         {
           "itemHrid": "/items/crimson_helmet",
-          "count": 35
+          "count": 28
         },
         {
           "itemHrid": "/items/rainbow_helmet",
-          "count": 35
+          "count": 28
         },
         {
           "itemHrid": "/items/crimson_plate_body",
-          "count": 35
+          "count": 28
         },
         {
           "itemHrid": "/items/rainbow_plate_body",
-          "count": 35
+          "count": 28
         },
         {
           "itemHrid": "/items/crimson_plate_legs",
-          "count": 35
+          "count": 28
         },
         {
           "itemHrid": "/items/rainbow_plate_legs",
-          "count": 35
+          "count": 28
+        },
+        {
+          "itemHrid": "/items/crimson_gauntlets",
+          "count": 28
+        },
+        {
+          "itemHrid": "/items/rainbow_gauntlets",
+          "count": 28
+        },
+        {
+          "itemHrid": "/items/crimson_boots",
+          "count": 28
+        },
+        {
+          "itemHrid": "/items/rainbow_boots",
+          "count": 28
         }
       ],
       "7": [
@@ -541,27 +789,43 @@
         },
         {
           "itemHrid": "/items/rainbow_helmet",
-          "count": 40
+          "count": 32
         },
         {
           "itemHrid": "/items/holy_helmet",
-          "count": 40
+          "count": 32
         },
         {
           "itemHrid": "/items/rainbow_plate_body",
-          "count": 40
+          "count": 32
         },
         {
           "itemHrid": "/items/holy_plate_body",
-          "count": 40
+          "count": 32
         },
         {
           "itemHrid": "/items/rainbow_plate_legs",
-          "count": 40
+          "count": 32
         },
         {
           "itemHrid": "/items/holy_plate_legs",
-          "count": 40
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/rainbow_gauntlets",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/holy_gauntlets",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/rainbow_boots",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/holy_boots",
+          "count": 32
         }
       ],
       "8": [
@@ -575,15 +839,23 @@
         },
         {
           "itemHrid": "/items/holy_helmet",
-          "count": 100
+          "count": 80
         },
         {
           "itemHrid": "/items/holy_plate_body",
-          "count": 100
+          "count": 80
         },
         {
           "itemHrid": "/items/holy_plate_legs",
-          "count": 100
+          "count": 80
+        },
+        {
+          "itemHrid": "/items/holy_gauntlets",
+          "count": 80
+        },
+        {
+          "itemHrid": "/items/holy_boots",
+          "count": 80
         },
         {
           "itemHrid": "/items/super_defense_coffee",
@@ -602,7 +874,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_efficiency",
         "typeHrid": "/buff_types/efficiency",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -614,7 +886,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -624,7 +896,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -919,7 +1191,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_efficiency",
         "typeHrid": "/buff_types/efficiency",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -931,7 +1203,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -941,7 +1213,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -1188,7 +1460,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_stamina_level",
         "typeHrid": "/buff_types/stamina_level",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -1198,19 +1470,19 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_hp_regen",
         "typeHrid": "/buff_types/hp_regen",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
-        "flatBoost": 0.0005,
-        "flatBoostLevelBonus": 0.0005,
+        "flatBoost": 0.0003,
+        "flatBoostLevelBonus": 0.0003,
         "startTime": "0001-01-01T00:00:00Z",
         "duration": 0
       }
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -1220,7 +1492,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -1499,7 +1771,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_attack_level",
         "typeHrid": "/buff_types/attack_level",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -1509,7 +1781,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_attack_speed",
         "typeHrid": "/buff_types/attack_speed",
         "ratioBoost": 0.005,
         "ratioBoostLevelBonus": 0.005,
@@ -1521,7 +1793,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -1531,7 +1803,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -1778,7 +2050,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_efficiency",
         "typeHrid": "/buff_types/efficiency",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -1790,7 +2062,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -1800,7 +2072,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -2047,7 +2319,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_efficiency",
         "typeHrid": "/buff_types/efficiency",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -2059,7 +2331,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -2069,7 +2341,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -2420,7 +2692,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_power_level",
         "typeHrid": "/buff_types/power_level",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -2432,7 +2704,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -2442,7 +2714,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -2689,7 +2961,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_efficiency",
         "typeHrid": "/buff_types/efficiency",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -2701,7 +2973,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -2711,7 +2983,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -3046,7 +3318,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_action_speed",
         "typeHrid": "/buff_types/action_speed",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -3056,7 +3328,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_enhancing_success",
         "typeHrid": "/buff_types/enhancing_success",
         "ratioBoost": 0.0005,
         "ratioBoostLevelBonus": 0.0005,
@@ -3068,7 +3340,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -3078,7 +3350,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -3325,7 +3597,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_intelligence_level",
         "typeHrid": "/buff_types/intelligence_level",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -3335,19 +3607,19 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_mp_regen",
         "typeHrid": "/buff_types/mp_regen",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
-        "flatBoost": 0.0005,
-        "flatBoostLevelBonus": 0.0005,
+        "flatBoost": 0.0003,
+        "flatBoostLevelBonus": 0.0003,
         "startTime": "0001-01-01T00:00:00Z",
         "duration": 0
       }
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -3357,7 +3629,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -3708,7 +3980,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_efficiency",
         "typeHrid": "/buff_types/efficiency",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -3720,7 +3992,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -3730,7 +4002,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -3977,7 +4249,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_magic_level",
         "typeHrid": "/buff_types/magic_level",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -3989,7 +4261,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -3999,7 +4271,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -4021,15 +4293,35 @@
         },
         {
           "itemHrid": "/items/wooden_water_staff",
-          "count": 8
+          "count": 4
         },
         {
           "itemHrid": "/items/wooden_nature_staff",
-          "count": 8
+          "count": 4
         },
         {
           "itemHrid": "/items/wooden_fire_staff",
-          "count": 8
+          "count": 4
+        },
+        {
+          "itemHrid": "/items/cotton_hat",
+          "count": 4
+        },
+        {
+          "itemHrid": "/items/cotton_robe_top",
+          "count": 4
+        },
+        {
+          "itemHrid": "/items/cotton_robe_bottoms",
+          "count": 4
+        },
+        {
+          "itemHrid": "/items/cotton_gloves",
+          "count": 4
+        },
+        {
+          "itemHrid": "/items/cotton_boots",
+          "count": 4
         }
       ],
       "2": [
@@ -4047,27 +4339,47 @@
         },
         {
           "itemHrid": "/items/wooden_water_staff",
-          "count": 12
+          "count": 6
         },
         {
           "itemHrid": "/items/birch_water_staff",
-          "count": 12
+          "count": 6
         },
         {
           "itemHrid": "/items/wooden_nature_staff",
-          "count": 12
+          "count": 6
         },
         {
           "itemHrid": "/items/birch_nature_staff",
-          "count": 12
+          "count": 6
         },
         {
           "itemHrid": "/items/wooden_fire_staff",
-          "count": 12
+          "count": 6
         },
         {
           "itemHrid": "/items/birch_fire_staff",
-          "count": 12
+          "count": 6
+        },
+        {
+          "itemHrid": "/items/linen_hat",
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/linen_robe_top",
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/linen_robe_bottoms",
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/linen_gloves",
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/linen_boots",
+          "count": 8
         }
       ],
       "3": [
@@ -4085,26 +4397,46 @@
         },
         {
           "itemHrid": "/items/birch_water_staff",
-          "count": 16
+          "count": 8
         },
         {
           "itemHrid": "/items/cedar_water_staff",
-          "count": 16
+          "count": 8
         },
         {
           "itemHrid": "/items/birch_nature_staff",
-          "count": 16
+          "count": 8
         },
         {
           "itemHrid": "/items/cedar_nature_staff",
-          "count": 16
+          "count": 8
         },
         {
           "itemHrid": "/items/birch_fire_staff",
-          "count": 16
+          "count": 8
         },
         {
           "itemHrid": "/items/cedar_fire_staff",
+          "count": 8
+        },
+        {
+          "itemHrid": "/items/linen_hat",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/linen_robe_top",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/linen_robe_bottoms",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/linen_gloves",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/linen_boots",
           "count": 16
         }
       ],
@@ -4123,27 +4455,47 @@
         },
         {
           "itemHrid": "/items/cedar_water_staff",
-          "count": 20
+          "count": 10
         },
         {
           "itemHrid": "/items/purpleheart_water_staff",
-          "count": 20
+          "count": 10
         },
         {
           "itemHrid": "/items/cedar_nature_staff",
-          "count": 20
+          "count": 10
         },
         {
           "itemHrid": "/items/purpleheart_nature_staff",
-          "count": 20
+          "count": 10
         },
         {
           "itemHrid": "/items/cedar_fire_staff",
-          "count": 20
+          "count": 10
         },
         {
           "itemHrid": "/items/purpleheart_fire_staff",
-          "count": 20
+          "count": 10
+        },
+        {
+          "itemHrid": "/items/bamboo_hat",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/bamboo_robe_top",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/bamboo_robe_bottoms",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/bamboo_gloves",
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/bamboo_boots",
+          "count": 16
         },
         {
           "itemHrid": "/items/magic_coffee",
@@ -4165,27 +4517,47 @@
         },
         {
           "itemHrid": "/items/purpleheart_water_staff",
-          "count": 24
+          "count": 12
         },
         {
           "itemHrid": "/items/ginkgo_water_staff",
-          "count": 24
+          "count": 12
         },
         {
           "itemHrid": "/items/purpleheart_nature_staff",
-          "count": 24
+          "count": 12
         },
         {
           "itemHrid": "/items/ginkgo_nature_staff",
-          "count": 24
+          "count": 12
         },
         {
           "itemHrid": "/items/purpleheart_fire_staff",
-          "count": 24
+          "count": 12
         },
         {
           "itemHrid": "/items/ginkgo_fire_staff",
-          "count": 24
+          "count": 12
+        },
+        {
+          "itemHrid": "/items/bamboo_hat",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/bamboo_robe_top",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/bamboo_robe_bottoms",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/bamboo_gloves",
+          "count": 32
+        },
+        {
+          "itemHrid": "/items/bamboo_boots",
+          "count": 32
         }
       ],
       "6": [
@@ -4203,27 +4575,47 @@
         },
         {
           "itemHrid": "/items/ginkgo_water_staff",
-          "count": 28
+          "count": 14
         },
         {
           "itemHrid": "/items/redwood_water_staff",
-          "count": 28
+          "count": 14
         },
         {
           "itemHrid": "/items/ginkgo_nature_staff",
-          "count": 28
+          "count": 14
         },
         {
           "itemHrid": "/items/redwood_nature_staff",
-          "count": 28
+          "count": 14
         },
         {
           "itemHrid": "/items/ginkgo_fire_staff",
-          "count": 28
+          "count": 14
         },
         {
           "itemHrid": "/items/redwood_fire_staff",
-          "count": 28
+          "count": 14
+        },
+        {
+          "itemHrid": "/items/silk_hat",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/silk_robe_top",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/silk_robe_bottoms",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/silk_gloves",
+          "count": 24
+        },
+        {
+          "itemHrid": "/items/silk_boots",
+          "count": 24
         }
       ],
       "7": [
@@ -4241,27 +4633,47 @@
         },
         {
           "itemHrid": "/items/redwood_water_staff",
-          "count": 32
+          "count": 16
         },
         {
           "itemHrid": "/items/arcane_water_staff",
-          "count": 32
+          "count": 16
         },
         {
           "itemHrid": "/items/redwood_nature_staff",
-          "count": 32
+          "count": 16
         },
         {
           "itemHrid": "/items/arcane_nature_staff",
-          "count": 32
+          "count": 16
         },
         {
           "itemHrid": "/items/redwood_fire_staff",
-          "count": 32
+          "count": 16
         },
         {
           "itemHrid": "/items/arcane_fire_staff",
-          "count": 32
+          "count": 16
+        },
+        {
+          "itemHrid": "/items/silk_hat",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/silk_robe_top",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/silk_robe_bottoms",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/silk_gloves",
+          "count": 48
+        },
+        {
+          "itemHrid": "/items/silk_boots",
+          "count": 48
         }
       ],
       "8": [
@@ -4275,15 +4687,35 @@
         },
         {
           "itemHrid": "/items/arcane_water_staff",
-          "count": 80
+          "count": 40
         },
         {
           "itemHrid": "/items/arcane_nature_staff",
-          "count": 80
+          "count": 40
         },
         {
           "itemHrid": "/items/arcane_fire_staff",
-          "count": 80
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/radiant_hat",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/radiant_robe_top",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/radiant_robe_bottoms",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/radiant_gloves",
+          "count": 40
+        },
+        {
+          "itemHrid": "/items/radiant_boots",
+          "count": 40
         },
         {
           "itemHrid": "/items/super_magic_coffee",
@@ -4302,7 +4734,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_efficiency",
         "typeHrid": "/buff_types/efficiency",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -4314,7 +4746,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -4324,7 +4756,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -4611,7 +5043,7 @@
     },
     "actionBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_efficiency",
         "typeHrid": "/buff_types/efficiency",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -4623,7 +5055,7 @@
     ],
     "globalBuffs": [
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_experience",
         "typeHrid": "/buff_types/wisdom",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,
@@ -4633,7 +5065,7 @@
         "duration": 0
       },
       {
-        "uniqueHrid": "/buff_uniques/house",
+        "uniqueHrid": "/buff_uniques/house_rare_find",
         "typeHrid": "/buff_types/rare_find",
         "ratioBoost": 0,
         "ratioBoostLevelBonus": 0,

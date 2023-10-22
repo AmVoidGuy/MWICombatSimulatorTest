@@ -122,6 +122,7 @@ class CombatSimulator extends EventTarget {
     }
 
     processCombatStartEvent(event) {
+        this.players[0].generateHouseBuffs();
         this.players[0].reset(this.simulationTime);
 
         let regenTickEvent = new RegenTickEvent(this.simulationTime + REGEN_TICK_INTERVAL);

@@ -1,6 +1,7 @@
 class CombatUnit {
     isPlayer;
     houseRooms = [];
+    houseBuffs = {};
     isStunned = false;
     stunExpireTime = null;
     isBlind = false;
@@ -114,18 +115,6 @@ class CombatUnit {
     constructor() {}
 
     updateCombatDetails() {
-        if(this.isPlayer) {
-            if(this.combatDetails.combatStats.HPRegen === 0) {
-                this.combatDetails.combatStats.HPRegen = 0.01;
-            } else {
-                this.combatDetails.combatStats.HPRegen = 0.01 + this.combatDetails.combatStats.HPRegen;
-            }
-            if(this.combatDetails.combatStats.MPRegen === 0) {
-                this.combatDetails.combatStats.MPRegen = 0.01;
-            } else {
-                this.combatDetails.combatStats.MPRegen = 0.01 + this.combatDetails.combatStats.MPRegen;
-            }
-        }
 
         ["stamina", "intelligence", "attack", "power", "defense", "ranged", "magic"].forEach((stat) => {
             this.combatDetails[stat + "Level"] = this[stat + "Level"];
@@ -200,12 +189,27 @@ class CombatUnit {
         this.combatDetails.combatStats.natureAmplify += this.getBuffBoost("/buff_types/nature_amplify").flatBoost;
         this.combatDetails.combatStats.fireAmplify += this.getBuffBoost("/buff_types/fire_amplify").flatBoost;
 
+        if(this.isPlayer) {
+            this.combatDetails.combatStats.attackInterval /= (1 + (this.combatDetails.attackLevel / 2000));
+
+            if(this.combatDetails.combatStats.HPRegen === 0) {
+                this.combatDetails.combatStats.HPRegen = 0.01;
+            } else {
+                this.combatDetails.combatStats.HPRegen = 0.01 + this.combatDetails.combatStats.HPRegen;
+            }
+            if(this.combatDetails.combatStats.MPRegen === 0) {
+                this.combatDetails.combatStats.MPRegen = 0.01;
+            } else {
+                this.combatDetails.combatStats.MPRegen = 0.01 + this.combatDetails.combatStats.MPRegen;
+            }
+        }
+
         let attackIntervalBoosts = this.getBuffBoosts("/buff_types/attack_speed");
         let attackIntervalRatioBoost = attackIntervalBoosts
             .map((boost) => boost.ratioBoost)
             .reduce((prev, cur) => prev + cur, 0);
         this.combatDetails.combatStats.attackInterval =
-            this.combatDetails.combatStats.attackInterval * (1 / (1 + attackIntervalRatioBoost));
+            this.combatDetails.combatStats.attackInterval / (1 + attackIntervalRatioBoost);
 
         let baseArmor = 0.2 * this.combatDetails.defenseLevel + this.combatDetails.combatStats.armor;
         this.combatDetails.totalArmor = baseArmor;
@@ -268,17 +272,18 @@ class CombatUnit {
 
     addBuff(buff, currentTime) {
         buff.startTime = currentTime;
-        if(buff.uniqueHrid == "/buff_uniques/house") {
-            if(this.combatBuffs[buff.typeHrid]) {
-                this.combatBuffs[buff.typeHrid].flatBoost += buff.flatBoost;
-                this.combatBuffs[buff.typeHrid].ratioBoost += buff.ratioBoost;
-            } else {
-                this.combatBuffs[buff.typeHrid] = buff;
-            }
-        } else {
-            this.combatBuffs[buff.uniqueHrid] = buff;
-        }
+        this.combatBuffs[buff.uniqueHrid] = buff;
+
         this.updateCombatDetails();
+    }
+
+    addHouseBuff(buff) {
+        if(this.houseBuffs[buff.typeHrid]) {
+            this.houseBuffs[buff.typeHrid].flatBoost += buff.flatBoost;
+            this.houseBuffs[buff.typeHrid].ratioBoost += buff.ratioBoost;
+        } else {
+            this.houseBuffs[buff.typeHrid] = buff;
+        }
     }
 
     removeExpiredBuffs(currentTime) {
@@ -293,16 +298,19 @@ class CombatUnit {
     }
 
     clearBuffs() {
-        this.combatBuffs = {};
+        this.combatBuffs = this.houseBuffs;
+        this.updateCombatDetails();
+    }
+
+    generateHouseBuffs() {
         for (let i = 0; i < this.houseRooms.length; i++) {
             const houseRoom = this.houseRooms[i];
             if (houseRoom) {
                 houseRoom.buffs.forEach((buff) => {
-                    this.addBuff(buff, 0);
+                    this.addHouseBuff(buff, 0);
                 });
             }
         }
-        this.updateCombatDetails();
     }
 
     clearCCs() {
@@ -341,7 +349,6 @@ class CombatUnit {
         this.blindExpireTime = null;
         this.isSilenced = false;
         this.silenceExpireTime = null;
-
         this.clearBuffs();
         this.updateCombatDetails();
         this.resetCooldowns(currentTime);

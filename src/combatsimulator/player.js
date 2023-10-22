@@ -17,7 +17,6 @@ class Player extends CombatUnit {
         "/equipment_types/pouch": null,
     };
 
-    houseRooms = [];
     constructor() {
         super();
 
