@@ -96,23 +96,23 @@ class CombatUtilities {
             case "/damage_types/physical":
                 sourceDamageMultiplier = 1 + source.combatDetails.combatStats.physicalAmplify;
                 sourceResistance = source.combatDetails.totalArmor;
-                targetResistance = target.combatDetails.totalArmor * (1 - source.combatDetails.combatStats.armorPenetration);
+                targetResistance = target.combatDetails.totalArmor / (1 + source.combatDetails.combatStats.armorPenetration);
                 targetReflectPower = target.combatDetails.combatStats.physicalReflectPower;
                 break;
             case "/damage_types/water":
                 sourceDamageMultiplier = 1 + source.combatDetails.combatStats.waterAmplify;
                 sourceResistance = source.combatDetails.totalWaterResistance;
-                targetResistance = target.combatDetails.totalWaterResistance * (1 - source.combatDetails.combatStats.waterPenetration);
+                targetResistance = target.combatDetails.totalWaterResistance / (1 + source.combatDetails.combatStats.waterPenetration);
                 break;
             case "/damage_types/nature":
                 sourceDamageMultiplier = 1 + source.combatDetails.combatStats.natureAmplify;
                 sourceResistance = source.combatDetails.totalNatureResistance;
-                targetResistance = target.combatDetails.totalNatureResistance * (1 - source.combatDetails.combatStats.naturePenetration);
+                targetResistance = target.combatDetails.totalNatureResistance / (1 + source.combatDetails.combatStats.naturePenetration);
                 break;
             case "/damage_types/fire":
                 sourceDamageMultiplier = 1 + source.combatDetails.combatStats.fireAmplify;
                 sourceResistance = source.combatDetails.totalFireResistance;
-                targetResistance = target.combatDetails.totalFireResistance * (1 - source.combatDetails.combatStats.firePenetration);
+                targetResistance = target.combatDetails.totalFireResistance / (1 + source.combatDetails.combatStats.firePenetration);
                 break;
             default:
                 throw new Error("Unknown damage type: " + damageType);
