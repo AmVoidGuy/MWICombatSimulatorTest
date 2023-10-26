@@ -21396,7 +21396,7 @@
     "/items/centaur_hoof": {
         "hrid": "/items/centaur_hoof",
         "name": "Centaur Hoof",
-        "description": "Material used in smithing Centaur Boots",
+        "description": "Material used in tailoring Centaur Boots",
         "categoryHrid": "/item_categories/resource",
         "sellPrice": 5000,
         "isTradable": true,
