@@ -297,11 +297,8 @@ class CombatUnit {
         this.updateCombatDetails();
     }
 
-    clearBuffs(currentTime) {
-        this.combatBuffs = {};
-        for(const buff in this.houseBuffs) {
-            this.addBuff(this.houseBuffs[buff], currentTime);
-        }
+    clearBuffs() {
+        this.combatBuffs = structuredClone(this.houseBuffs);
         this.updateCombatDetails();
     }
 
@@ -352,7 +349,7 @@ class CombatUnit {
         this.blindExpireTime = null;
         this.isSilenced = false;
         this.silenceExpireTime = null;
-        this.clearBuffs(currentTime);
+        this.clearBuffs();
         this.updateCombatDetails();
         this.resetCooldowns(currentTime);
 
