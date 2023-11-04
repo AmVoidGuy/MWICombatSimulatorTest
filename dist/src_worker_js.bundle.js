@@ -1491,23 +1491,39 @@ class CombatUtilities {
             case "/damage_types/physical":
                 sourceDamageMultiplier = 1 + source.combatDetails.combatStats.physicalAmplify;
                 sourceResistance = source.combatDetails.totalArmor;
-                targetResistance = target.combatDetails.totalArmor / (1 + source.combatDetails.combatStats.armorPenetration);
+                if(target.combatDetails.totalArmor < 0) {
+                    targetResistance = target.combatDetails.totalArmor;
+                } else {
+                    targetResistance = target.combatDetails.totalArmor / (1 + source.combatDetails.combatStats.armorPenetration);
+                }
                 targetReflectPower = target.combatDetails.combatStats.physicalReflectPower;
                 break;
             case "/damage_types/water":
                 sourceDamageMultiplier = 1 + source.combatDetails.combatStats.waterAmplify;
                 sourceResistance = source.combatDetails.totalWaterResistance;
-                targetResistance = target.combatDetails.totalWaterResistance / (1 + source.combatDetails.combatStats.waterPenetration);
+                if(target.combatDetails.totalWaterResistance < 0) {
+                    targetResistance = target.combatDetails.totalWaterResistance;
+                } else {
+                    targetResistance = target.combatDetails.totalWaterResistance / (1 + source.combatDetails.combatStats.waterPenetration);
+                }
                 break;
             case "/damage_types/nature":
                 sourceDamageMultiplier = 1 + source.combatDetails.combatStats.natureAmplify;
                 sourceResistance = source.combatDetails.totalNatureResistance;
-                targetResistance = target.combatDetails.totalNatureResistance / (1 + source.combatDetails.combatStats.naturePenetration);
+                if(target.combatDetails.totalNatureResistance < 0) {
+                    targetResistance = target.combatDetails.totalNatureResistance;
+                } else {
+                    targetResistance = target.combatDetails.totalNatureResistance / (1 + source.combatDetails.combatStats.naturePenetration);
+                }
                 break;
             case "/damage_types/fire":
                 sourceDamageMultiplier = 1 + source.combatDetails.combatStats.fireAmplify;
                 sourceResistance = source.combatDetails.totalFireResistance;
-                targetResistance = target.combatDetails.totalFireResistance / (1 + source.combatDetails.combatStats.firePenetration);
+                if(target.combatDetails.totalFireResistance < 0) {
+                    targetResistance = target.combatDetails.totalFireResistance;
+                } else {
+                    targetResistance = target.combatDetails.totalFireResistance / (1 + source.combatDetails.combatStats.firePenetration);
+                }
                 break;
             default:
                 throw new Error("Unknown damage type: " + damageType);
